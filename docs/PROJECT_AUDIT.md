@@ -57,7 +57,6 @@ Stand: 2026-11-22. Geprüft wurden das Repository `EasyTech-IT/MOVORA`, Branch `
 **C. Fehlt und muss eingerichtet werden**
 - GitHub CLI (`gh`), Supabase CLI.
 - `.github/workflows/` (CI-Pipeline).
-- Testframework und Playwright-Tests. Es gibt keinen Test-Befehl.
 - Projekt-Dokumente aus Kapitel 18 (siehe B).
 - MCP-Server (Supabase, GitHub, Playwright, Context7). Konfiguration noch nicht geprüft.
 - Datenbankschema mit RLS. Noch keine Tabellen.
@@ -76,7 +75,7 @@ Stand: 2026-11-22. Geprüft wurden das Repository `EasyTech-IT/MOVORA`, Branch `
 1. Feature-Branch `feature/ai-skills` nach `main` mergen oder als PR prüfen.
 2. Git-E-Mail bestätigen (`1-1@notify.easytechit.de`).
 3. Registrierung und Login mit deinem Supabase-Projekt testen.
-4. Test-Befehl und Playwright einrichten. Vorher Freigabe einholen, da neue Dev-Abhängigkeiten nötig sind.
+4. Playwright ist eingerichtet (`npm test`, 5 Tests). Login-Tests mit Testkonto ergänzen.
 
 ## Ergebnis MASTERPROMPT 4.0
 

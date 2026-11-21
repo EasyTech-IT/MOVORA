@@ -67,12 +67,21 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 | `npx tsc --noEmit` | bestanden |
 | `npm run lint` | bestanden |
 | `npm run build` | bestanden |
-| Tests | kein Testskript in `package.json` vorhanden, daher nicht ausgeführt |
+| Playwright-Tests (`npm test`) | 5 von 5 bestanden (Startseite, Navigation, Login- und Registrierungsseite, Schutz von `/protected`) |
 | Erkennung der Rollen durch Copilot | nicht geprüft. Es ist eine Sichtprüfung im VS-Code-Chat nötig. |
+
+## 5a. Playwright-Einrichtung
+
+- Dev-Abhängigkeit: `@playwright/test` (Installation: `npm install -D @playwright/test`, danach `npx playwright install chromium`).
+- Konfiguration: [playwright.config.ts](../playwright.config.ts). Tests liegen in `tests/e2e/`. Chromium ist das einzige Projekt.
+- Start: `npm test`. Die Konfiguration startet `npm run dev` automatisch, außer `PLAYWRIGHT_BASE_URL` ist gesetzt. Dann wird gegen diese URL getestet.
+- Abgedeckt: Startseite, Navigation zur Login-Seite, Login- und Registrierungsseite, Schutz von `/protected` ohne Anmeldung.
+- Nicht abgedeckt: echter Login und echte Registrierung. Dafür braucht es ein Testkonto in einer separaten Supabase-Testumgebung. Es werden keine Zugangsdaten im Repository gespeichert und keine produktiven Daten verändert.
+- Ausgaben (`test-results/`, `playwright-report/`) sind in `.gitignore` eingetragen.
 
 ## 6. Offene Punkte
 
-- Ein Testframework und Playwright fehlen. Dafür ist eine Freigabe nötig, weil neue Dev-Abhängigkeiten eingeführt werden.
+- Playwright ist eingerichtet, aber nur für öffentliche Seiten und den Schutz von `/protected` getestet. Ein echter Login-Test mit einem Testkonto fehlt.
 - Login und Registrierung mit echtem Supabase-Projekt sind nicht getestet.
 - Git-E-Mail `1-1@notify.easytechit.de` ist nicht bestätigt.
 - Der Feature-Branch ist nicht nach `main` gemergt.
@@ -82,6 +91,6 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 ## 7. Nächste Schritte
 
 1. Rollenerkennung im VS-Code-Chat prüfen (`/agents`, Prompts über `/`).
-2. Testframework nach Freigabe einrichten, danach `run-tests` mit echtem Testskript ausführen.
+2. Playwright-Tests für Login und geschützte Bereiche mit einem Testkonto in einer Test-Umgebung ergänzen.
 3. Supabase-Login mit Testkonto prüfen.
 4. Feature-Branch per PR prüfen und danach entscheiden, ob er nach `main` geht.
