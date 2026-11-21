@@ -16,12 +16,39 @@ Die Skills liegen unter [.github/skills/](../.github/skills/). Jeder Skill ist e
 | [quality-assurance-and-testing](../.github/skills/quality-assurance-and-testing/SKILL.md) | Lint, Build, Tests, Playwright |
 | [open-source-integration](../.github/skills/open-source-integration/SKILL.md) | Prüfung und Dokumentation neuer Open-Source-Bausteine |
 | [deployment-and-devops](../.github/skills/deployment-and-devops/SKILL.md) | Umgebungen, GitHub Actions, Deployment (nur mit Freigabe) |
+| [performance-and-scaling](../.github/skills/performance-and-scaling/SKILL.md) | Messung, Datenbankindizes, Kartenlast, Caching, Lasttests (neu) |
+| [android-mobile-capacitor](../.github/skills/android-mobile-capacitor/SKILL.md) | Android-App mit Ionic React und Capacitor (neu) |
 
-## Agenten und Prompts
+## Agenten
 
-- Agenten: [.github/agents/](../.github/agents/)
-- Prompt-Vorlagen: [.github/prompts/](../.github/prompts/)
+| Agent | Zweck | Status |
+|---|---|---|
+| [movora-architect](../.github/agents/movora-architect.agent.md) | Planung, Arbeitspakete, Konflikte | erweitert |
+| [movora-frontend](../.github/agents/movora-frontend.agent.md) | Oberflächen, Karten, Formulare | erweitert |
+| [movora-supabase](../.github/agents/movora-supabase.agent.md) | Schema, Migrationen, RLS, Auth | erweitert |
+| [movora-qa-security](../.github/agents/movora-qa-security.agent.md) | Code Review, Sicherheit, Datenschutz, Score-Prüfung | erweitert |
+| [movora-backend](../.github/agents/movora-backend.agent.md) | Route Handlers, Server Actions, Imports, API | neu |
+| [movora-payments](../.github/agents/movora-payments.agent.md) | Stripe, Webhooks, Entitlements | neu |
+| [movora-scoring](../.github/agents/movora-scoring.agent.md) | Bewertungslogik und Mindeststichproben | neu |
+| [movora-tester](../.github/agents/movora-tester.agent.md) | Testausführung und Test-Automatisierung | neu |
+| [movora-mobile](../.github/agents/movora-mobile.agent.md) | Android mit Capacitor | neu |
+
+## Prompts
+
+| Prompt | Zweck | Status |
+|---|---|---|
+| [plan-feature](../.github/prompts/plan-feature.prompt.md) | Feature planen, ohne Code | vorhanden |
+| [review-security](../.github/prompts/review-security.prompt.md) | Sicherheitsprüfung | vorhanden |
+| [add-gtfs-source](../.github/prompts/add-gtfs-source.prompt.md) | GTFS-Quelle anbinden | vorhanden |
+| [implement-feature](../.github/prompts/implement-feature.prompt.md) | Freigegebenen Plan über die Agenten umsetzen | neu |
+| [run-tests](../.github/prompts/run-tests.prompt.md) | Lint, Typen, Build und Tests ausführen | neu |
+
+## Weitere Dateien
+
 - Projektregeln: [.github/copilot-instructions.md](../.github/copilot-instructions.md)
+- Projektstand: [PROJECT_AUDIT.md](./PROJECT_AUDIT.md)
+- Einrichtungsbericht: [AI_SETUP_REPORT.md](./AI_SETUP_REPORT.md)
+
 
 ## Pflege
 

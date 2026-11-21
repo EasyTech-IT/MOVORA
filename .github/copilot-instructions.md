@@ -26,3 +26,7 @@ MOVORA ist eine Mobilitätsplattform. Next.js (App Router) mit React und TypeScr
 - `npm run build` fehlerfrei
 - Bei Auth- oder Datenänderungen: Login, Registrierung und geschützte Seiten manuell prüfen.
 - Commit-Nachrichten mit Co-authored-by-Trailer.
+
+## Rollen
+
+Die Rollen und Prompts stehen in [docs/AI_SKILLS.md](../docs/AI_SKILLS.md). Feature-Umsetzung läuft über [implement-feature](./prompts/implement-feature.prompt.md) und die Agenten in [.github/agents/](./agents/). Jeder Agent nennt seine Dateibereiche und Pflichttests.
