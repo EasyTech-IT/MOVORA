@@ -34,3 +34,7 @@ Dieses Dokument listet alle verwendeten Open-Source-Projekte, deren Lizenzen, He
 - `@supabase/ssr` und `@supabase/supabase-js` sind auf `latest` gepinnt → vor Produktivbetrieb auf feste Versionen festlegen.
 - shadcn/ui-Komponenten werden in das Repo kopiert (kein npm-Paket) → Updates manuell über die shadcn-CLI.
 - MapLibre-Styles/Tiles: Für den Produktivbetrieb eigenen Tile-Server oder Anbieter (z. B. MapTiler, OpenFreeMap) mit passender Lizenz wählen; OSM-Attribution beachten.
+
+## KI-Skills und Projektregeln
+
+Die Nutzung der Bausteine ist in Skills beschrieben: [docs/AI_SKILLS.md](./AI_SKILLS.md). Der Skill [open-source-integration](../.github/skills/open-source-integration/SKILL.md) legt fest, wie neue Repositories geprüft und hier eingetragen werden.
