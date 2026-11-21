@@ -19,7 +19,7 @@ Du implementierst die Bewertungen von MOVORA. Die fachlichen Regeln stehen im Sk
 ## Nicht-Aufgaben
 - Keine Festlegung der Gewichte ohne Freigabe des Nutzers.
 - Keine Anzeigelogik ([movora-frontend](./movora-frontend.agent.md)).
-- Keine Schemaänderungen ohne [movora-supabase](./movora-supabase.agent.md).
+- Definiert die Schemaanforderungen für Score-Daten. Erstellung und Prüfung der Migration übernimmt [movora-supabase](./movora-supabase.agent.md).
 
 ## Zusammenarbeit
 - Schreibwege über [movora-backend](./movora-backend.agent.md). Prüfung auf Manipulation durch [movora-qa-security](./movora-qa-security.agent.md).

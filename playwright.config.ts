@@ -1,6 +1,25 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:3000";
+// Ein externer Server (PLAYWRIGHT_BASE_URL) wird nicht gestartet. In diesem
+// Fall laufen nur die Tests mit Supabase-Konfiguration.
+const externalBaseURL = process.env.PLAYWRIGHT_BASE_URL;
+const baseURL = externalBaseURL ?? "http://localhost:3000";
+const noEnvBaseURL = "http://localhost:3001";
+
+// Zweiter Dev-Server ohne Supabase-Variablen. Leere Werte überschreiben die
+// Einträge aus .env.local, damit der Fail-Closed-Pfad geprüft wird. Eigenes
+// distDir, damit er nicht um das Dev-Lock des ersten Servers konkurriert.
+const noEnvServer = {
+  command: "npm run dev -- --port 3001",
+  url: noEnvBaseURL,
+  reuseExistingServer: false,
+  timeout: 120_000,
+  env: {
+    NEXT_PUBLIC_SUPABASE_URL: "",
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "",
+    NEXT_DIST_DIR: ".next-noenv",
+  },
+};
 
 export default defineConfig({
   testDir: "./tests/e2e",
@@ -9,21 +28,33 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL,
     trace: "on-first-retry",
   },
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: { ...devices["Desktop Chrome"], baseURL },
+      testIgnore: /missing-env\.spec\.ts/,
     },
+    ...(externalBaseURL
+      ? []
+      : [
+          {
+            name: "missing-env",
+            testMatch: /missing-env\.spec\.ts/,
+            use: { ...devices["Desktop Chrome"], baseURL: noEnvBaseURL },
+          },
+        ]),
   ],
-  webServer: process.env.PLAYWRIGHT_BASE_URL
+  webServer: externalBaseURL
     ? undefined
-    : {
-        command: "npm run dev",
-        url: baseURL,
-        reuseExistingServer: !process.env.CI,
-        timeout: 120_000,
-      },
+    : [
+        {
+          command: "npm run dev",
+          url: baseURL,
+          reuseExistingServer: !process.env.CI,
+          timeout: 120_000,
+        },
+        noEnvServer,
+      ],
 });

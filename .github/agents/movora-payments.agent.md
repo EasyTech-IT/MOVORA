@@ -19,7 +19,7 @@ Du bearbeitest Zahlungen und Abonnements für MOVORA. Die fachlichen Regeln steh
 - Keine Preisentscheidungen. Preise und Pläne bestätigt der Nutzer.
 - Keine Vermischung mit Google-Play-Abos. Sie laufen über eigene Entitlement-Quellen.
 - Keine Score-Logik ([movora-scoring](./movora-scoring.agent.md)).
-- Keine Schemaänderungen ohne [movora-supabase](./movora-supabase.agent.md).
+- Definiert die Schemaanforderungen für Abos und Entitlements. Erstellung und Prüfung der Migration übernimmt [movora-supabase](./movora-supabase.agent.md).
 
 ## Zusammenarbeit
 - Schema über [movora-supabase](./movora-supabase.agent.md). Oberfläche über [movora-frontend](./movora-frontend.agent.md). Prüfung über [movora-qa-security](./movora-qa-security.agent.md).

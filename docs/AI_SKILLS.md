@@ -7,7 +7,7 @@ Die Skills liegen unter [.github/skills/](../.github/skills/). Jeder Skill ist e
 | [movora-product-architecture](../.github/skills/movora-product-architecture/SKILL.md) | Produktumfang, Module und Architekturentscheidungen |
 | [supabase-database-engineering](../.github/skills/supabase-database-engineering/SKILL.md) | Schema, Migrationen, RLS, Indizes |
 | [movora-scoring-engine](../.github/skills/movora-scoring-engine/SKILL.md) | Bewertungslogik (vorläufige Gewichtung, nicht als final behandeln) |
-| [mobility-data-engineering](../.github/skills/mobility-data-engineering/SKILL.md) | GTFS/GBFS-Import, Validierung mit GTFS Validator |
+| [mobility-data-engineering](../.github/skills/mobility-data-engineering/SKILL.md) | GTFS/GBFS-Import, formatgerechte Validierung (GTFS Validator für Schedule, eigene Validatoren für GTFS-RT, GBFS, Geodaten) |
 | [apple-inspired-design-system](../.github/skills/apple-inspired-design-system/SKILL.md) | Designsystem (Navy, Teal, Weiß), Typografie, Abstände |
 | [motion-design-and-interactions](../.github/skills/motion-design-and-interactions/SKILL.md) | Übergänge und Interaktionen, dezent und zweckgebunden |
 | [frontend-engineering](../.github/skills/frontend-engineering/SKILL.md) | Next.js, React, shadcn/ui, MapLibre-Integration |

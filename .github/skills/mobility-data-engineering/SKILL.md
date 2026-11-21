@@ -11,12 +11,12 @@ description: Mobilitätsdaten wie GTFS, GTFS-Realtime, Mobilithek, DELFI, Haltes
 - Auswahl oder Prüfung einer Datenquelle und ihrer Lizenz.
 
 ## Zuerst lesen
-1. [docs/OPEN_SOURCE_COMPONENTS.md](../../../docs/OPEN_SOURCE_COMPONENTS.md) (Abschnitt GTFS Validator).
+1. [docs/OPEN_SOURCE_COMPONENTS.md](../../../docs/OPEN_SOURCE_COMPONENTS.md) (Tabelle der Open-Source-Komponenten, Validatoren).
 2. Lizenz und Nutzungsbedingungen der Datenquelle.
 3. Vorhandene Karten- und Datenkomponenten (`components/map.tsx`).
 
 ## Fachliche Regeln
-- Nutze den MobilityData GTFS Validator für die Prüfung statt eigener Parser für Validierung.
+- Validierung nach Format: GTFS Schedule mit dem MobilityData GTFS Validator; GTFS-Realtime mit dem MobilityData GTFS-Realtime Validator; GBFS mit dem MobilityData GBFS Validator; Geodaten per GeoJSON-Schema oder PostGIS-Constraints. Keine eigenen Parser für die Validierung.
 - Jede Datenquelle hat Lizenz, Herkunft, Aktualisierungsintervall und Stand dokumentiert.
 - Rohdaten bleiben unverändert. Transformationen sind nachvollziehbar.
 - Fehlende oder veraltete Daten werden als solche angezeigt. Sie sind keine Qualitätsbewertung des Anbieters.
@@ -25,13 +25,13 @@ description: Mobilitätsdaten wie GTFS, GTFS-Realtime, Mobilithek, DELFI, Haltes
 
 ## Arbeitsablauf
 1. Quelle, Lizenz und Format bestimmen (GTFS, GTFS-RT, GBFS, Geodaten).
-2. Feed mit dem GTFS Validator prüfen und Bericht speichern.
+2. Feed mit dem passenden Validator prüfen (siehe Regeln oben) und Bericht speichern.
 3. Import in Supabase über versionierte Migration oder Edge Function.
 4. Geodaten als PostGIS-Geometrien speichern.
 5. Stichprobe prüfen: Anzahl Haltestellen, Routen, Zeitbereich.
 
 ## Bibliotheken und Werkzeuge
-MobilityData GTFS Validator (Apache-2.0), MapLibre GL JS (BSD-3-Clause), PostGIS.
+MobilityData Validatoren für GTFS Schedule, GTFS-Realtime und GBFS (Lizenz und Version vor Einsatz prüfen), MapLibre GL JS (BSD-3-Clause), PostGIS.
 
 ## Sicherheitsregeln
 - Importskripte nur mit geprüften Quellen-URLs. Keine beliebigen URLs aus Nutzereingaben laden.
@@ -45,7 +45,7 @@ MobilityData GTFS Validator (Apache-2.0), MapLibre GL JS (BSD-3-Clause), PostGIS
 - Doppelte Haltestellen durch fehlende Eindeutigkeit beim Import.
 
 ## Qualitätskontrolle
-- Validator-Bericht ohne kritische Fehler.
+- Validator-Bericht des jeweiligen Formats ohne kritische Fehler.
 - Stichprobenprüfung auf der Karte.
 
 ## Definition of Done

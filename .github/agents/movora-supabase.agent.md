@@ -32,7 +32,7 @@ Keine Secrets ausgeben. `.env.local` nicht lesen und nicht committen.
 - Dev- und Produktionsumgebung strikt trennen.
 
 ## Zusammenarbeit
-- [movora-backend](./movora-backend.agent.md) nutzt das Schema. [movora-payments](./movora-payments.agent.md) und [movora-scoring](./movora-scoring.agent.md) legen ihre Tabellen über Migrationen an, die hier geprüft werden.
+- [movora-backend](./movora-backend.agent.md) nutzt das Schema. [movora-payments](./movora-payments.agent.md) und [movora-scoring](./movora-scoring.agent.md) definieren nur die benötigten Schemaanforderungen. Erstellung und Prüfung der Migrationen liegen bei diesem Agenten.
 - [movora-qa-security](./movora-qa-security.agent.md) prüft die RLS-Policies.
 
 ## Dateibereiche

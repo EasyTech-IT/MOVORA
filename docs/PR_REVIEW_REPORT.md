@@ -24,15 +24,21 @@ Stand: nach Korrekturen auf `feature/ai-skills`. Nichts wurde gemerged, `main` w
 - **Ort:** `lib/supabase/proxy.ts`
 - **Problem:** Fehlten die Supabase-Env-Variablen, gab `updateSession` früh `next()` zurück. Dann wurden auch geschützte Routen ohne Login ausgeliefert.
 - **Fix:** Ohne Env-Variablen leitet der Proxy alle nicht-öffentlichen Pfade auf `/auth/login` um. Öffentliche Pfade (`/`, `/login*`, `/auth*`) bleiben erreichbar. Der Supabase-Client wird ohne Konfiguration nicht erzeugt.
-- **Einschränkung:** Die Playwright-Suite läuft mit den lokalen Env-Variablen. Der Fail-closed-Zweig wird dadurch nicht automatisch getestet.
+- **Test:** `tests/e2e/missing-env.spec.ts` läuft gegen einen zweiten Webserver (Port 3001) ohne Env-Variablen. Dort prüfen drei Tests den Fail-closed-Zweig.
+- **Einschränkung:** Ein ungültiger (nicht fehlender) Auth-Konfigurationswert, etwa ein falscher Key, wird nicht E2E-getestet. Er führt zur Weiterleitung auf den Login, weil `requireClaims()` bei Fehlern redirectet.
+
+### K2: Sicherheit hing nur am Proxy (behoben)
+
+- **Ort:** `app/protected/page.tsx`, `lib/supabase/require-claims.ts` (neu)
+- **Problem:** Die Seite war statisch und nur der Proxy schützte sie.
+- **Fix:** `requireClaims()` prüft serverseitig über `auth.getClaims()`. Ohne Env-Variablen, bei Fehlern oder ohne Claims erfolgt eine Weiterleitung auf `/auth/login`. Die Seite rendert den Inhalt erst danach. Damit hängt die Sicherheit nicht allein am Proxy.
 
 ## Mittelschwere Probleme
 
-### M1: Geschützte Seite rendert die statische Hülle vor dem Login-Check
+### M1: Geschützte Seite rendert die statische Hülle vor dem Login-Check (behoben)
 
 - **Ort:** `app/protected/page.tsx`
-- **Problem:** Die statische Hülle mit `FetchDataSteps` wird ausgeliefert, bevor `UserDetails` die Claims prüft. Der Proxy fängt das im Normalfall ab. Trotzdem sollte die Seite keine Inhalte vor der Prüfung zeigen.
-- **Empfehlung:** Die gesamte Seite nach der Session-Prüfung rendern, sobald echte Inhalte hinzukommen.
+- **Fix:** Die Seite ruft `requireClaims()` vor jedem Inhalt auf. Die statische Tutorial-Hülle wurde entfernt.
 
 ### M2: Keine CI-Pipeline
 
@@ -45,33 +51,35 @@ Stand: nach Korrekturen auf `feature/ai-skills`. Nichts wurde gemerged, `main` w
 - **Problem:** Tutorial-Komponenten und `VERCEL_*`-Abfragen stammen aus dem Starter. Die Startseite zeigt Tutorial-Schritte statt MOVORA-Inhalt.
 - **Empfehlung:** Entfernen, sobald die MOVORA-Startseite steht. Vorher die Abhängigkeiten prüfen.
 
-### M4: Veraltete Kommentare und Hilfsfunktion
+### M4: Veraltete Kommentare und Hilfsfunktion (behoben)
 
 - **Ort:** `lib/utils.ts`
-- **Problem:** Der Kommentar „This check can be removed, it is just for tutorial purposes“ ist irreführend, weil `hasEnvVars` jetzt sicherheitsrelevant ist.
-- **Empfehlung:** Kommentar anpassen, sobald die Umgebung steht.
+- **Fix:** Der Kommentar beschreibt jetzt die Fail-closed-Funktion von `hasEnvVars`.
 
 ## Kleinere Verbesserungsvorschläge
 
 - **Doppelter „Sign up“-Link** auf der Startseite. Der Test grenzt das über die Navigation ab.
 - **Git-Warnungen zu `core.autocrlf`** (LF → CRLF) bei `.gitignore`, `package.json`, `package-lock.json`. Keine inhaltliche Auswirkung.
-- **Test-Abdeckung:** Der Fail-closed-Pfad aus K1 könnte mit einem Test ohne Env-Variablen geprüft werden. Dafür braucht es einen eigenen Webserver-Lauf.
+- **Test-Abdeckung (erledigt):** Der Fail-closed-Pfad aus K1 wird jetzt über den Webserver ohne Env-Variablen getestet.
+- **Valid-Session-Test:** `tests/e2e/authenticated.spec.ts` ist übersprungen, solange `E2E_USER_EMAIL` und `E2E_USER_PASSWORD` fehlen. Er braucht ein eigenes Supabase-Testprojekt.
+- **GBFS-Validator:** Der konkrete Validator ist noch nicht verifiziert. Vor der Nutzung Repository und Lizenz prüfen.
 
 ## Bestätigte funktionierende Bereiche
 
 - TypeScript (`tsc --noEmit`) ohne Fehler.
 - ESLint ohne Fehler.
 - Production Build erfolgreich, inklusive Proxy und Routen `/`, `/auth/*`, `/protected`.
-- Playwright: 5/5 Tests bestanden.
+- Playwright: 8 bestanden, 1 übersprungen (Valid-Session-Test ohne `E2E_USER_*`).
+- Prüfung der Copilot-Review-Hinweise: Migrationen (Payments/Scoring definieren Anforderungen, `movora-supabase` erstellt und prüft) und Feed-Validierung (GTFS Schedule mit dem GTFS Validator, GTFS-RT/GBFS/Geodaten mit passenden Validatoren oder Schemas) sind in Agenten, Skills, Prompt und Dokumentation korrigiert.
 - Keine Secrets in getrackten Dateien gefunden.
 - `.env.local` ist git-ignoriert.
 - Agenten und Skills sind UTF-8-kodiert, ohne Mojibake.
 
 ## Merge-Empfehlung
 
-**Bedingt bereit.** Der kritische Fail-open ist behoben und alle technischen Prüfungen sind grün. Vor dem Merge sollte geklärt sein:
+**Technisch bereit für den Merge, nach manueller Freigabe.** K1 und K2 sind behoben, Typecheck, Lint, Build und die Playwright-Tests sind grün. Vor dem Merge sollte geklärt sein:
 
-1. Die Änderung am Proxy (K1) ist freigegeben.
-2. Die PR-Beschreibung ist auf GitHub aktualisiert.
+1. Die PR-Beschreibung ist auf GitHub aktualisiert.
+2. Der Valid-Session-Test ist offen. Er läuft erst mit einem Supabase-Testprojekt.
 
-Die mittelschweren Punkte (CI, Starter-Reste, Schutz der Seitenhülle) sind Folgeaufgaben und blockieren den Merge nicht.
+Offen bleiben CI (M2) und Starter-Reste (M3). Sie sind Folgeaufgaben und blockieren den Merge nicht.

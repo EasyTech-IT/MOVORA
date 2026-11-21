@@ -18,7 +18,7 @@ Dieses Dokument listet alle verwendeten Open-Source-Projekte, deren Lizenzen, He
 | Komponente | Herkunft | Lizenz | Geplanter Einsatz |
 |---|---|---|---|
 | Next.js SaaS Starter (nur Konzepte/Stripe-Logik) | [nextjs/saas-starter](https://github.com/nextjs/saas-starter) | MIT | Stripe Checkout, Abos, Kundenportal, Rollen/Teams. **Nicht kopieren** – verwendet Drizzle statt Supabase; nur Stripe-Muster übernehmen und an Supabase anpassen. |
-| MobilityData GTFS Validator | [MobilityData/gtfs-validator](https://github.com/MobilityData/gtfs-validator) | Apache-2.0 | Validierung von Fahrplandaten (GTFS), sobald MOVORA Mobilitätsdaten verarbeitet. Java-Tool, Einsatz als CLI/CI-Schritt. |
+| MobilityData GTFS Validator | [MobilityData/gtfs-validator](https://github.com/MobilityData/gtfs-validator) | Apache-2.0 | Validierung von GTFS-Schedule-Feeds, sobald MOVORA Mobilitätsdaten verarbeitet. Java-Tool, Einsatz als CLI/CI-Schritt. Für GTFS-Realtime, GBFS und Geodaten gelten eigene Validatoren bzw. Schemas (siehe Skill `mobility-data-engineering`). |
 | Ionic Capacitor Starters | [ionic-team/capacitor-starters](https://github.com/ionic-team/capacitor-starters) | MIT | Android-App-Grundgerüst, sobald die Web-Basis stabil ist. Noch nicht integriert. Rollenregeln: [movora-mobile](../.github/agents/movora-mobile.agent.md), Skill [android-mobile-capacitor](../.github/skills/android-mobile-capacitor/SKILL.md). |
 | Playwright | [microsoft/playwright](https://github.com/microsoft/playwright) | Apache-2.0 | End-to-End-Tests. |
 
