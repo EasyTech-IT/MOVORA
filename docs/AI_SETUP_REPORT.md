@@ -94,6 +94,12 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 - Die Seite selbst prüft zusätzlich: [require-claims.ts](../lib/supabase/require-claims.ts) wird von [app/protected/page.tsx](../app/protected/page.tsx) vor dem Rendern aufgerufen. Der Schutz hängt damit nicht allein vom Proxy ab.
 - Öffentlich bleiben: `/`, `/auth/*` und `/login*`.
 
+## 5c. Roadmap-Dokumente (Prompts 1 bis 6)
+
+- Konzepte ohne Migrationen und ohne Supabase-Änderungen: [SUPABASE_SETUP.md](./SUPABASE_SETUP.md), [ENVIRONMENT_CONFIGURATION.md](./ENVIRONMENT_CONFIGURATION.md), [DATABASE_MODEL.md](./DATABASE_MODEL.md), [RLS_POLICY_PLAN.md](./RLS_POLICY_PLAN.md), [SCORING_ENGINE.md](./SCORING_ENGINE.md), [MOBILITY_DATA_PLAN.md](./MOBILITY_DATA_PLAN.md).
+- Designtokens Navy, Teal und Weiß in `app/globals.css` (Commit `a2e6268`). Textkontraste mindestens 5,5:1.
+- Review-Threads von PR #1 (Migrationszuständigkeit, GTFS-Validatoren) sind im Code korrigiert. Auf GitHub noch nicht als erledigt markiert.
+
 ## 6. Offene Punkte
 
 - Der Session-Test (`authenticated.spec.ts`) ist übersprungen. Er braucht ein Testkonto in einer separaten Supabase-Testumgebung und die Variablen `E2E_USER_EMAIL` und `E2E_USER_PASSWORD`. Es wurden keine Zugangsdaten hinterlegt.
@@ -104,7 +110,8 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 - Git-E-Mail `1-1@notify.easytechit.de` ist nicht bestätigt.
 - Der Feature-Branch ist nicht nach `main` gemergt.
 - Starter-Reste (`components/tutorial/*`, `VERCEL_*`-Abfragen) sind noch vorhanden.
-- Designsystem Navy/Teal ist noch nicht in `app/globals.css` umgesetzt.
+- Die PR-Beschreibung von PR #1 ist veraltet und muss manuell aktualisiert werden.
+- Scoring-Engine: Test-Runner (Vitest oder Playwright) ist nicht entschieden.
 
 ## 7. Nächste Schritte
 
