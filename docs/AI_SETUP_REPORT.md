@@ -67,22 +67,40 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 | `npx tsc --noEmit` | bestanden |
 | `npm run lint` | bestanden |
 | `npm run build` | bestanden |
-| Playwright-Tests (`npm test`) | 5 von 5 bestanden (Startseite, Navigation, Login- und Registrierungsseite, Schutz von `/protected`) |
+| Playwright-Tests (`npm test`) | 11 bestanden, 1 übersprungen (Session-Test ohne `E2E_USER_EMAIL`/`E2E_USER_PASSWORD`) |
 | Erkennung der Rollen durch Copilot | nicht geprüft. Es ist eine Sichtprüfung im VS-Code-Chat nötig. |
 
 ## 5a. Playwright-Einrichtung
 
 - Dev-Abhängigkeit: `@playwright/test` (Installation: `npm install -D @playwright/test`, danach `npx playwright install chromium`).
-- Konfiguration: [playwright.config.ts](../playwright.config.ts). Tests liegen in `tests/e2e/`. Chromium ist das einzige Projekt.
-- Start: `npm test`. Die Konfiguration startet `npm run dev` automatisch, außer `PLAYWRIGHT_BASE_URL` ist gesetzt. Dann wird gegen diese URL getestet.
-- Abgedeckt: Startseite, Navigation zur Login-Seite, Login- und Registrierungsseite, Schutz von `/protected` ohne Anmeldung.
-- Nicht abgedeckt: echter Login und echte Registrierung. Dafür braucht es ein Testkonto in einer separaten Supabase-Testumgebung. Es werden keine Zugangsdaten im Repository gespeichert und keine produktiven Daten verändert.
-- Ausgaben (`test-results/`, `playwright-report/`) sind in `.gitignore` eingetragen.
+- Konfiguration: [playwright.config.ts](../playwright.config.ts). Tests liegen in `tests/e2e/`.
+- Drei Dev-Server, jeweils mit eigenem `distDir`, damit sie sich nicht um das `.next/dev`-Lock streiten:
+  - Port 3000: normale `.env.local`-Konfiguration. Projekt `chromium`.
+  - Port 3001: leere Supabase-Variablen (`.next-noenv`). Projekt `missing-env`.
+  - Port 3002: ungültige URL `not-a-valid-url` (`.next-invalid`). Projekt `invalid-env`.
+- Start: `npm test`. Die Konfiguration startet die Server automatisch, außer `PLAYWRIGHT_BASE_URL` ist gesetzt. Dann wird nur gegen diese URL getestet, ohne die Server mit leerer oder ungültiger Konfiguration.
+- Testdateien:
+  - `public-pages.spec.ts`: Startseite, Navigation, Login- und Registrierungsseite.
+  - `protected-routes.spec.ts`: `/protected` ohne Session leitet auf den Login um.
+  - `missing-env.spec.ts`: fehlende Konfiguration. Geschützte Seite wird verweigert, Startseite und Login bleiben erreichbar.
+  - `invalid-env.spec.ts`: ungültige Konfiguration. Kein Absturz (Status unter 500), Weiterleitung auf den Login, Konfigurationshinweis auf der Startseite.
+  - `authenticated.spec.ts`: gültige Session. Läuft nur mit `E2E_USER_EMAIL` und `E2E_USER_PASSWORD` gegen eine Supabase-Testumgebung. Sonst übersprungen.
+- Ausgaben (`test-results/`, `playwright-report/`, `.next-noenv/`, `.next-invalid/`) sind in `.gitignore` eingetragen.
+
+## 5b. Serverseitiger Auth-Schutz
+
+- Der Proxy ([proxy.ts](../proxy.ts), [lib/supabase/proxy.ts](../lib/supabase/proxy.ts)) ist die erste Schicht. Er leitet nicht-öffentliche Pfade auf `/auth/login` um, wenn keine gültige Session besteht.
+- Fail closed: Fehlende oder ungültige Konfiguration (`hasEnvVars` in [lib/utils.ts](../lib/utils.ts)), Fehler beim Anlegen des Clients und Fehler bei `getClaims()` führen für geschützte Pfade zum Login.
+- Die Seite selbst prüft zusätzlich: [require-claims.ts](../lib/supabase/require-claims.ts) wird von [app/protected/page.tsx](../app/protected/page.tsx) vor dem Rendern aufgerufen. Der Schutz hängt damit nicht allein vom Proxy ab.
+- Öffentlich bleiben: `/`, `/auth/*` und `/login*`.
 
 ## 6. Offene Punkte
 
-- Playwright ist eingerichtet, aber nur für öffentliche Seiten und den Schutz von `/protected` getestet. Ein echter Login-Test mit einem Testkonto fehlt.
-- Login und Registrierung mit echtem Supabase-Projekt sind nicht getestet.
+- Der Session-Test (`authenticated.spec.ts`) ist übersprungen. Er braucht ein Testkonto in einer separaten Supabase-Testumgebung und die Variablen `E2E_USER_EMAIL` und `E2E_USER_PASSWORD`. Es wurden keine Zugangsdaten hinterlegt.
+- Echter Login und echte Registrierung mit einem Supabase-Projekt sind nicht getestet.
+- Kein CI-Workflow (`.github/workflows/`). Die Tests laufen nur lokal über `npm test`.
+- Die Rollenerkennung in VS Code ist nicht geprüft.
+- GBFS-Validator: Repository und Lizenz sind noch nicht verifiziert.
 - Git-E-Mail `1-1@notify.easytechit.de` ist nicht bestätigt.
 - Der Feature-Branch ist nicht nach `main` gemergt.
 - Starter-Reste (`components/tutorial/*`, `VERCEL_*`-Abfragen) sind noch vorhanden.
@@ -91,6 +109,7 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 ## 7. Nächste Schritte
 
 1. Rollenerkennung im VS-Code-Chat prüfen (`/agents`, Prompts über `/`).
-2. Playwright-Tests für Login und geschützte Bereiche mit einem Testkonto in einer Test-Umgebung ergänzen.
-3. Supabase-Login mit Testkonto prüfen.
-4. Feature-Branch per PR prüfen und danach entscheiden, ob er nach `main` geht.
+2. Supabase-Testprojekt anlegen, `E2E_USER_*` setzen und den Session-Test ausführen.
+3. CI-Workflow mit `npm run lint`, `npm run build` und `npm test` einrichten.
+4. Nach dem Merge den Feature-Branch aufräumen und Starter-Reste entfernen.
+

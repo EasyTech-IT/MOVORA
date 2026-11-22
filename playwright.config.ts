@@ -21,6 +21,21 @@ const noEnvServer = {
   },
 };
 
+// Dritter Server mit ungültiger Supabase-URL. Der Fail-Closed-Pfad muss auch
+// dann greifen und darf nicht mit einem Serverfehler abstürzen.
+const invalidEnvBaseURL = "http://localhost:3002";
+const invalidEnvServer = {
+  command: "npm run dev -- --port 3002",
+  url: invalidEnvBaseURL,
+  reuseExistingServer: false,
+  timeout: 120_000,
+  env: {
+    NEXT_PUBLIC_SUPABASE_URL: "not-a-valid-url",
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "test-invalid-key",
+    NEXT_DIST_DIR: ".next-invalid",
+  },
+};
+
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
@@ -34,7 +49,7 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"], baseURL },
-      testIgnore: /missing-env\.spec\.ts/,
+      testIgnore: /(missing-env|invalid-env)\.spec\.ts/,
     },
     ...(externalBaseURL
       ? []
@@ -43,6 +58,11 @@ export default defineConfig({
             name: "missing-env",
             testMatch: /missing-env\.spec\.ts/,
             use: { ...devices["Desktop Chrome"], baseURL: noEnvBaseURL },
+          },
+          {
+            name: "invalid-env",
+            testMatch: /invalid-env\.spec\.ts/,
+            use: { ...devices["Desktop Chrome"], baseURL: invalidEnvBaseURL },
           },
         ]),
   ],
@@ -56,5 +76,6 @@ export default defineConfig({
           timeout: 120_000,
         },
         noEnvServer,
+        invalidEnvServer,
       ],
 });

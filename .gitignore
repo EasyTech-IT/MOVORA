@@ -16,6 +16,7 @@
 # next.js
 /.next/
 /.next-noenv/
+/.next-invalid/
 /out/
 
 # production

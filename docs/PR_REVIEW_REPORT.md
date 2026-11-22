@@ -61,6 +61,7 @@ Stand: nach Korrekturen auf `feature/ai-skills`. Nichts wurde gemerged, `main` w
 - **Doppelter „Sign up“-Link** auf der Startseite. Der Test grenzt das über die Navigation ab.
 - **Git-Warnungen zu `core.autocrlf`** (LF → CRLF) bei `.gitignore`, `package.json`, `package-lock.json`. Keine inhaltliche Auswirkung.
 - **Test-Abdeckung (erledigt):** Der Fail-closed-Pfad aus K1 wird jetzt über den Webserver ohne Env-Variablen getestet.
+- **Ungültige Supabase-Konfiguration (erledigt):** `hasEnvVars` prüft jetzt URL und Key. Proxy und `requireClaims()` leiten bei Fehlern auf den Login um, statt unkontrolliert abzustürzen. Der Test `tests/e2e/invalid-env.spec.ts` deckt das ab.
 - **Valid-Session-Test:** `tests/e2e/authenticated.spec.ts` ist übersprungen, solange `E2E_USER_EMAIL` und `E2E_USER_PASSWORD` fehlen. Er braucht ein eigenes Supabase-Testprojekt.
 - **GBFS-Validator:** Der konkrete Validator ist noch nicht verifiziert. Vor der Nutzung Repository und Lizenz prüfen.
 
@@ -69,7 +70,7 @@ Stand: nach Korrekturen auf `feature/ai-skills`. Nichts wurde gemerged, `main` w
 - TypeScript (`tsc --noEmit`) ohne Fehler.
 - ESLint ohne Fehler.
 - Production Build erfolgreich, inklusive Proxy und Routen `/`, `/auth/*`, `/protected`.
-- Playwright: 8 bestanden, 1 übersprungen (Valid-Session-Test ohne `E2E_USER_*`).
+- Playwright: 11 bestanden, 1 übersprungen (Valid-Session-Test ohne `E2E_USER_*`). Neu hinzu kommen die Fälle mit ungültiger Supabase-URL (`invalid-env`).
 - Prüfung der Copilot-Review-Hinweise: Migrationen (Payments/Scoring definieren Anforderungen, `movora-supabase` erstellt und prüft) und Feed-Validierung (GTFS Schedule mit dem GTFS Validator, GTFS-RT/GBFS/Geodaten mit passenden Validatoren oder Schemas) sind in Agenten, Skills, Prompt und Dokumentation korrigiert.
 - Keine Secrets in getrackten Dateien gefunden.
 - `.env.local` ist git-ignoriert.

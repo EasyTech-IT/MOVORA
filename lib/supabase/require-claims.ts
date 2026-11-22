@@ -11,12 +11,19 @@ export async function requireClaims() {
     redirect("/auth/login");
   }
 
-  const supabase = await createClient();
-  const { data, error } = await supabase.auth.getClaims();
+  // redirect() wirft intern, daher bleibt es außerhalb des try-Blocks.
+  let claims = null;
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase.auth.getClaims();
+    claims = error ? null : (data?.claims ?? null);
+  } catch {
+    claims = null;
+  }
 
-  if (error || !data?.claims) {
+  if (!claims) {
     redirect("/auth/login");
   }
 
-  return data.claims;
+  return claims;
 }
