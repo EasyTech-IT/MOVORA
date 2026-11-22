@@ -2,6 +2,7 @@
 // keine Scores, keine Bewertungen. Echte Daten kommen später aus Supabase.
 export type DemoProvider = {
   id: string;
+  slug: string;
   name: string;
   category: string;
   region: string;
@@ -12,6 +13,7 @@ export type DemoProvider = {
 export const DEMO_PROVIDERS: DemoProvider[] = [
   {
     id: "demo-nord",
+    slug: "beispiel-verkehrsverbund-nord",
     name: "Beispiel Verkehrsverbund Nord",
     category: "Verkehrsverbund",
     region: "Beispielregion Nord",
@@ -20,6 +22,7 @@ export const DEMO_PROVIDERS: DemoProvider[] = [
   },
   {
     id: "demo-sued",
+    slug: "beispiel-regionalbahn-sued",
     name: "Beispiel Regionalbahn Süd",
     category: "Regionalverkehr",
     region: "Beispielregion Süd",
@@ -28,6 +31,7 @@ export const DEMO_PROVIDERS: DemoProvider[] = [
   },
   {
     id: "demo-stadt",
+    slug: "beispiel-stadtwerke-mitte",
     name: "Beispiel Stadtwerke Mitte",
     category: "Stadtverkehr",
     region: "Beispielstadt Mitte",

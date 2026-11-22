@@ -7,10 +7,14 @@ export async function updateSession(request: NextRequest) {
     request,
   });
 
+  // Public routes only show demo data; protected content stays behind requireClaims().
+  const { pathname } = request.nextUrl;
   const isPublicPath =
-    request.nextUrl.pathname === "/" ||
-    request.nextUrl.pathname.startsWith("/login") ||
-    request.nextUrl.pathname.startsWith("/auth");
+    pathname === "/" ||
+    pathname === "/entdecken" ||
+    pathname.startsWith("/anbieter/") ||
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/auth");
 
   // Fail closed: without a valid Supabase configuration no session can be
   // verified, so protected paths must not be served.

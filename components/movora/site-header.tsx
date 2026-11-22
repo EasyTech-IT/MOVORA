@@ -6,7 +6,7 @@ import { hasEnvVars } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { href: "/", label: "Startseite" },
-  { href: "#suche", label: "Entdecken" },
+  { href: "/entdecken", label: "Entdecken" },
   { href: "#anbieter", label: "Anbieter" },
   { href: "#bewertungen", label: "Bewertungen" },
   { href: "#unternehmen", label: "Für Unternehmen" },

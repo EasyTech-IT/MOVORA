@@ -1,6 +1,8 @@
 # Prompt 8: Suche und Anbieterprofile (Implementierungsplan)
 
-> **Status: Plan.** Die Umsetzung mit Datenbank beginnt erst nach Freigabe des Schemas. Bis dahin gibt es nur Demo-Daten (siehe [PROMPT_7_PLAN.md](./PROMPT_7_PLAN.md)).
+> **Status: Demo-Daten umgesetzt.** Suche (`/entdecken`) mit Filtern und Paginierung sowie Anbieterprofile (`/anbieter/[slug]`) laufen auf `DEMO_PROVIDERS`. Noch nicht umgesetzt: Datenbankanbindung (wartet auf Schema-Freigabe), Score- und Datenaktualitäts-Filter (keine Scores vorhanden), Historie und echte Nutzerbewertungen.
+>
+> Bekannte Einschränkungen: Unbekannte Anbieter-Slugs zeigen die Not-Found-Ansicht ohne Profilinhalt, liefern aber HTTP 200 statt 404 (Soft-404). Grund: Mit `cacheComponents` ist `dynamicParams = false` nicht erlaubt, und `connection()` außerhalb von `<Suspense>` verhindert das Prerendering der bekannten Slugs. Der Test prüft daher den Inhalt.
 
 ## 1. Ist-Zustand (geprüft)
 

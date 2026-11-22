@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import type { DemoProvider } from "@/lib/demo-data";
+import Link from "next/link";
 import { DemoBadge } from "./demo-badge";
 
 export function ProviderCard({ provider }: { provider: DemoProvider }) {
@@ -10,7 +11,11 @@ export function ProviderCard({ provider }: { provider: DemoProvider }) {
           {provider.isDemo ? <DemoBadge /> : null}
           <span className="text-xs text-muted-foreground">{provider.category}</span>
         </div>
-        <CardTitle className="text-lg">{provider.name}</CardTitle>
+        <CardTitle className="text-lg">
+          <Link href={`/anbieter/${provider.slug}`} className="hover:underline">
+            {provider.name}
+          </Link>
+        </CardTitle>
         <CardDescription>
           {provider.region} · {provider.transport.join(", ")}
         </CardDescription>
