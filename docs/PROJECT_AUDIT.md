@@ -90,7 +90,7 @@ Stand: 2026-11-22. Geprüft wurden das Repository `EasyTech-IT/MOVORA`, Branch `
 1. Feature-Branch `feature/ai-skills` nach `main` mergen oder als PR prüfen.
 2. Git-E-Mail bestätigen (`1-1@notify.easytechit.de`).
 3. Registrierung und Login mit deinem Supabase-Projekt testen.
-4. Playwright ist eingerichtet (`npm test`, 16 bestanden, 1 übersprungen). Session-Test mit Testkonto in einer Supabase-Testumgebung ausführen (`E2E_USER_EMAIL`, `E2E_USER_PASSWORD`).
+4. Playwright ist eingerichtet (`npm test`, 19 bestanden, 1 übersprungen). Session-Test mit Testkonto in einer Supabase-Testumgebung ausführen (`E2E_USER_EMAIL`, `E2E_USER_PASSWORD`).
 5. CI-Workflow (`.github/workflows/`) mit Lint, Build und Tests einrichten.
 6. GBFS-Validator: Repository und Lizenz prüfen, bevor er als Empfehlung gilt.
 
@@ -111,7 +111,7 @@ Prompts 7 bis 12:
 - Prompt 8 (Suche und Anbieterprofile): umgesetzt mit Demo-Daten, Commit `5524d4e`. Scores und Datenaktualität werden erst mit einer Datenbasis angezeigt.
 - Prompt 9 (Stripe und Abonnements): Konzept in [PAYMENT_ARCHITECTURE.md](./PAYMENT_ARCHITECTURE.md) und [SUBSCRIPTION_MODEL.md](./SUBSCRIPTION_MODEL.md), Commit `24048f3`. Keine Zahlungen ausgelöst.
 - Prompt 10 (B2B-Dashboard): Konzept in [B2B_DASHBOARD_CONCEPT.md](./B2B_DASHBOARD_CONCEPT.md), Commit `1719db9`. Umsetzung wartet auf Supabase-Datenbasis.
-- Prompt 11 (Admin und Moderation): Architektur in [ADMIN_MODERATION_ARCHITECTURE.md](./ADMIN_MODERATION_ARCHITECTURE.md), Commit `1719db9`. Umsetzung erst nach Freigabe.
+- Prompt 11 (Admin und Moderation): Architektur in [ADMIN_MODERATION_ARCHITECTURE.md](./ADMIN_MODERATION_ARCHITECTURE.md). Rollen, Guard und Routen sind umgesetzt (`lib/admin/`, `app/admin/`). Die Migration ist nicht angewendet. Moderation ist offen.
 - Prompt 12 (Android-App): Grundlage in [ANDROID_APP_FOUNDATION.md](./ANDROID_APP_FOUNDATION.md), Commit `1719db9`. Keine Veröffentlichung ohne Freigabe.
 
 Letzte Commits auf `feature/ai-skills`: `5524d4e`, `1719db9`, `24048f3`, `178a92c`, `935fb90`, `a2e6268`, `62fc2e2`, `50a2238`, `0df89b3`, `6efb49b`, `05cf6d3`.

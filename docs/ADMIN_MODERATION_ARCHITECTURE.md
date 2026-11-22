@@ -1,6 +1,10 @@
 # MOVORA – Administration und Moderation (Architektur)
 
-> **Status: Architektur.** Keine Implementierung vor Freigabe. Diese Datei beschreibt Rollen, Bereiche und Schutzregeln.
+> **Status: teilweise implementiert (Prompt 11, freigegeben).** Umgesetzt: Rollen und Bereiche in `lib/admin/roles.ts`, serverseitige Prüfung in `lib/admin/guard.ts`, Routen `app/admin/` (Übersicht und Bereichsseiten ohne Aktionen), Migration `supabase/migrations/20260301000000_admin_roles_and_audit.sql`, E2E-Tests `tests/e2e/admin-routes.spec.ts`.
+>
+> Noch nicht umgesetzt: Moderationsaktionen, Meldungen, Einspruchsprozess und Schreibzugriffe. Die Migration ist **nicht angewendet**. Sie braucht ein Test-Supabase-Projekt. Der erste `super_admin` wird manuell per SQL vergeben.
+>
+> Entscheidung 404 oder Login: Angemeldete Nutzer ohne Rolle sehen 404. Anonyme Nutzer werden wie bei allen nicht öffentlichen Pfaden zum Login geleitet. So ist die Existenz von `/admin` nicht erkennbar.
 
 ## 1. Grundprinzipien
 

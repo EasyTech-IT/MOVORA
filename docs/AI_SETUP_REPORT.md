@@ -67,7 +67,7 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 | `npx tsc --noEmit` | bestanden |
 | `npm run lint` | bestanden |
 | `npm run build` | bestanden |
-| Playwright-Tests (`npm test`) | 16 bestanden, 1 übersprungen (Stand Commit `5524d4e`; Session-Test ohne `E2E_USER_EMAIL`/`E2E_USER_PASSWORD`) |
+| Playwright-Tests (`npm test`) | 19 bestanden, 1 übersprungen (Session-Test ohne `E2E_USER_EMAIL`/`E2E_USER_PASSWORD`) |
 | Erkennung der Rollen durch Copilot | nicht geprüft. Es ist eine Sichtprüfung im VS-Code-Chat nötig. |
 
 ## 5a. Playwright-Einrichtung
@@ -109,7 +109,7 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 | 8 Suche und Anbieterprofile | umgesetzt, nur Demo-Daten (Commit `5524d4e`) | [PROMPT_8_PLAN.md](./PROMPT_8_PLAN.md), `app/entdecken/`, `app/anbieter/[slug]/` |
 | 9 Stripe und Abonnements | Konzept (Commit `24048f3`), keine Zahlungen | [PAYMENT_ARCHITECTURE.md](./PAYMENT_ARCHITECTURE.md), [SUBSCRIPTION_MODEL.md](./SUBSCRIPTION_MODEL.md) |
 | 10 B2B-Dashboard | Konzept (Commit `1719db9`), keine Implementierung ohne Datenbasis | [B2B_DASHBOARD_CONCEPT.md](./B2B_DASHBOARD_CONCEPT.md) |
-| 11 Admin und Moderation | Architektur (Commit `1719db9`), wartet auf Freigabe | [ADMIN_MODERATION_ARCHITECTURE.md](./ADMIN_MODERATION_ARCHITECTURE.md) |
+| 11 Admin und Moderation | teilweise umgesetzt (Rollen, Guard, Routen, Migration nicht angewendet), Moderation offen | [ADMIN_MODERATION_ARCHITECTURE.md](./ADMIN_MODERATION_ARCHITECTURE.md), `lib/admin/`, `app/admin/`, `tests/e2e/admin-routes.spec.ts` |
 | 12 Android-App | Grundlage (Commit `1719db9`), wartet auf Freigabe | [ANDROID_APP_FOUNDATION.md](./ANDROID_APP_FOUNDATION.md) |
 
 Die Suche und die Profile arbeiten nur mit fiktiven Demo-Daten (`lib/demo-data.ts`, `isDemo: true`). Scores und Datenaktualität werden nicht angezeigt, weil noch keine Datenbasis existiert. Unbekannte Anbieter-Slugs liefern HTTP 200 mit Hinweis (Soft-404, siehe PROMPT_8_PLAN).
