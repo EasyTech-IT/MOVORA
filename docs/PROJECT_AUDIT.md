@@ -88,6 +88,21 @@ Stand: 2026-11-22. Geprüft wurden das Repository `EasyTech-IT/MOVORA`, Branch `
 5. CI-Workflow (`.github/workflows/`) mit Lint, Build und Tests einrichten.
 6. GBFS-Validator: Repository und Lizenz prüfen, bevor er als Empfehlung gilt.
 
+## Roadmap-Stand (Prompts 1 bis 6)
+
+Reine Konzept- und Dokumentationsschritte, keine Migrationen und keine Supabase-Änderungen:
+
+- [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) und [ENVIRONMENT_CONFIGURATION.md](./ENVIRONMENT_CONFIGURATION.md) (Prompt 1)
+- [DATABASE_MODEL.md](./DATABASE_MODEL.md) (Prompt 2)
+- [RLS_POLICY_PLAN.md](./RLS_POLICY_PLAN.md) (Prompt 3)
+- [SCORING_ENGINE.md](./SCORING_ENGINE.md) (Prompt 4, Parameter vorläufig)
+- [MOBILITY_DATA_PLAN.md](./MOBILITY_DATA_PLAN.md) (Prompt 5)
+- Designtokens Navy, Teal und Weiß in `app/globals.css` (Prompt 6, Commit `a2e6268`)
+
+Letzte Commits auf `feature/ai-skills`: `a2e6268`, `62fc2e2`, `50a2238`, `0df89b3`, `6efb49b`, `05cf6d3`.
+
+Offen: Test-Runner für die Scoring-Engine (Vitest oder Playwright), Session-Test mit Supabase-Testprojekt, Prompts 7 bis 12.
+
 ## Ergebnis MASTERPROMPT 4.0
 
 - Vorhandene Agenten erweitert: `movora-architect`, `movora-frontend`, `movora-supabase`, `movora-qa-security`. Jeder hat jetzt Aufgaben, Nicht-Aufgaben, Zusammenarbeit, Dateibereiche, Sicherheitsregeln, Tests und Rückfragen.
