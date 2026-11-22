@@ -1,6 +1,27 @@
-# Prompt 7: Startseite, Suche und Ausbaupfad (Konzept)
+# Prompt 7: Startseite und Navigation (umgesetzt)
 
-> **Status: vorläufig.** Dieses Dokument basiert auf einer Zusammenfassung der Roadmap, nicht auf dem Originaltext von Prompt 7. Vor der Umsetzung mit dem Originaltext abgleichen.
+> **Status: umgesetzt** (Commit `935fb90`). Lint, TypeScript, Build und Playwright (13 bestanden, 1 übersprungen) sind grün.
+
+## Umsetzungsstand
+
+- Startseite mit den zehn Bereichen aus dem Prompt (Hero, Suche, Anbieter, Score, Bewertungen, Operational Quality, Kartenvorschau, Vorteile Nutzer und Unternehmen, Footer).
+- Navigation mit Anker auf Abschnitte der Startseite. Login und Registrierung im Header.
+- Demo-Daten in `lib/demo-data.ts`, jeweils mit Badge "Demo-Daten" und ohne Scores.
+- Suche filtert nur Demo-Daten (Client-Filter).
+- Karte per `next/dynamic` ohne SSR eingebunden.
+
+## Offen aus Prompt 7
+
+- Visuelle Prüfung der Startseite durch den Nutzer.
+- Nicht genutzte Komponenten `components/hero.tsx` und `components/tutorial/` entfernen oder behalten (Entscheidung ausstehend).
+
+Der ursprüngliche Entwurf folgt unverändert darunter.
+
+---
+
+# Prompt 7: Startseite, Suche und Ausbaupfad (Konzept, ursprünglicher Entwurf)
+
+> Dieser Entwurf basierte auf einer Zusammenfassung. Der Originaltext ist in der Umsetzung berücksichtigt.
 
 ## Ziel
 
