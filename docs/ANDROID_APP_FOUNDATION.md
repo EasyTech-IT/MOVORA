@@ -1,6 +1,6 @@
 # MOVORA – Android-App (technische Grundlage)
 
-> **Status: Scaffolding und Login/Tabs umgesetzt, Session-Speicher und Emulator-Test offen.** Firebase ist noch nicht eingebunden (DSFA offen). Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
+> **Status: Scaffolding, Login/Tabs, Secure Storage, Branding und Platzhalter-Logo umgesetzt. Gerätetest und Smoke-Test mit dem Supabase-Testprojekt offen.** Firebase ist noch nicht eingebunden (DSFA offen). Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
 
 ## 1. Empfehlung zur Architektur
 
@@ -49,7 +49,7 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 | Android-Navigation | Ionic-Tabs, Zurück-Taste über Capacitor-Back-Button |
 | Touch | Ziele mindestens 48 dp, Ionic-Gesten |
 | Responsive | Ionic-Grid, Tests auf kleinen und großen Geräten |
-| Sichere Session | Supabase-Session über Capacitor Preferences (kein `localStorage`). Keine Verschlüsselung, siehe §9 Punkt 5 |
+| Sichere Session | Supabase-Session über `@aparajita/capacitor-secure-storage` (Android Keystore, kein `localStorage`), siehe §9 Punkt 5 |
 | Kamera und Standort | Nur bei Bedarf anfragen, Begründung im Dialog, Ablehnung ohne Funktionsverlust |
 | Push | Firebase Cloud Messaging über Capacitor-Plugin (Freigabe und Datenschutzprüfung nötig) |
 | Offline | Nur für Anbieterprofile und Haltestellen-Stammdaten, nie für Scores ohne Zeitstempel |
@@ -72,8 +72,8 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 | Punkt | Stand |
 | --- | --- |
 | App-ID | Vorschlag `de.movora.app`, noch nicht reserviert |
-| App-Icons | Adaptive Icon (Vordergrund plus Hintergrund in Navy), noch nicht erstellt |
-| Splashscreen | Navy-Hintergrund, Wortmarke, Capacitor-Splash-Plugin |
+| App-Icons | Adaptive Icon (Vordergrund plus Hintergrund in Navy), Platzhalter-Logo umgesetzt |
+| Splashscreen | Navy-Hintergrund mit Logo über `drawable/splash.xml`, Starter-PNGs entfernt |
 | Build-Konfiguration | Gradle-Variante `debug` und `release`, Versionscode aus CI |
 | Signing-Konzept | Play App Signing. Upload-Schlüssel nur lokal oder im Secret-Store, nie im Repository |
 | Store-Metadaten | Titel, Kurzbeschreibung, Langbeschreibung, Datenschutzerklärung-URL, Kategorie Reisen und Lokales |
@@ -83,7 +83,7 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 ## 7. Umsetzungsreihenfolge (nach Freigabe)
 
 1. Projekt-Gerüst mit Ionic, Capacitor und Android-Plattform, lauffähig im Emulator.
-2. Login mit Supabase und Session-Speicher (Preferences, siehe §9 Punkt 5).
+2. Login mit Supabase und Session-Speicher (Secure Storage, siehe §9 Punkt 5).
 3. Tab-Navigation und Anbietersuche (mit Demo-Daten).
 4. Kartenansicht und Anbieterprofile.
 5. Bewertungen, Favoriten, Benachrichtigungen.
@@ -108,9 +108,9 @@ Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin. Es 
 2. Erledigt: Android-Plattform (`cap add android`), `cap sync android` und `gradlew assembleDebug` laufen durch.
 3. Erledigt: Supabase-Client mit Umgebungsvariablen (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, Vorlage in `.env.example`). Ohne Konfiguration bleibt die App gesperrt (Fail closed).
 4. Erledigt: Login (Anmeldung und Registrierung), geschützte Tabs (Anbieter mit Demo-Daten, Profil mit Abmeldung). Unit-Test für das Fail-closed-Verhalten.
-5. Erledigt mit Einschränkung: Session-Speicher über `@capacitor/preferences` (`src/lib/session-storage.ts`). Der Nutzer hat diese Variante gewählt. Preferences speichert **nicht verschlüsselt**. Die Anforderung „Sichere Session-Verwaltung“ ist damit nur teilweise erfüllt. Vor Produktivbetrieb ist ein verschlüsselter Speicher (Secure-Storage-Plugin, Freigabe nötig) zu prüfen.
+5. Erledigt: Session-Speicher über `@aparajita/capacitor-secure-storage@8.0.1` (`src/lib/session-storage.ts`), auf Android im Android Keystore. Die Web-Variante (Vite, Playwright) nutzt einen Fallback und ist **nicht** sicher. Die Verschlüsselung muss auf einem echten Gerät geprüft werden.
 6. Teilweise erledigt: Playwright-E2E (Mobile Chrome) prüft Fail-closed-Verhalten im Browser (`npx playwright test`). Offen: Lauf in Android-WebView auf Emulator oder Gerät. Dafür fehlen auf diesem Rechner Emulator und System-Image. Smoke-Test mit echtem Supabase-Testprojekt steht aus.
-7. Erledigt: Branding in Navy `#0B203C` und Teal `#2EB8AC` (aus `app/globals.css`) für Ionic-Theme (`src/theme/variables.css`) und Launcher-Hintergrund. Das Standard-Raster-Drawable wurde entfernt. Offen: finales Logo für Vordergrund und Splash, Signing-Konzept.
+7. Erledigt: Branding in Navy `#0B203C` und Teal `#2EB8AC` (aus `app/globals.css`) für Ionic-Theme (`src/theme/variables.css`) und Launcher-Hintergrund. Das Standard-Raster-Drawable wurde entfernt. Logo: Teal-„M“ mit weißem Punkt als Adaptive-Icon-Vordergrund (PNG pro Dichte für Android 7.x, Vektor für den Splash in `drawable/splash.xml`). Das Logo ist ein Platzhalter aus Vektorformen, kein finaler Markenentwurf. Offen: Signing-Konzept.
 8. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
 
 Der Abschnitt 7 beschreibt die weitere Reihenfolge der Funktionen.
