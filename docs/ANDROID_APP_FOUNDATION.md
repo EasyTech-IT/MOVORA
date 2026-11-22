@@ -109,7 +109,8 @@ Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin. Es 
 3. Erledigt: Supabase-Client mit Umgebungsvariablen (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, Vorlage in `.env.example`). Ohne Konfiguration bleibt die App gesperrt (Fail closed).
 4. Erledigt: Login (Anmeldung und Registrierung), geschützte Tabs (Anbieter mit Demo-Daten, Profil mit Abmeldung). Unit-Test für das Fail-closed-Verhalten.
 5. Erledigt mit Einschränkung: Session-Speicher über `@capacitor/preferences` (`src/lib/session-storage.ts`). Der Nutzer hat diese Variante gewählt. Preferences speichert **nicht verschlüsselt**. Die Anforderung „Sichere Session-Verwaltung“ ist damit nur teilweise erfüllt. Vor Produktivbetrieb ist ein verschlüsselter Speicher (Secure-Storage-Plugin, Freigabe nötig) zu prüfen.
-6. Teilweise erledigt: Playwright-E2E (Mobile Chrome) prüft Fail-closed-Verhalten im Browser (`npx playwright test`). Offen: Lauf in Android-WebView auf Emulator oder Gerät. Dafür fehlen auf diesem Rechner Emulator und System-Image. Smoke-Test mit echtem Supabase-Testprojekt steht aus. Icons, Splash, Signing.
-7. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
+6. Teilweise erledigt: Playwright-E2E (Mobile Chrome) prüft Fail-closed-Verhalten im Browser (`npx playwright test`). Offen: Lauf in Android-WebView auf Emulator oder Gerät. Dafür fehlen auf diesem Rechner Emulator und System-Image. Smoke-Test mit echtem Supabase-Testprojekt steht aus.
+7. Erledigt: Branding in Navy `#0B203C` und Teal `#2EB8AC` (aus `app/globals.css`) für Ionic-Theme (`src/theme/variables.css`) und Launcher-Hintergrund. Das Standard-Raster-Drawable wurde entfernt. Offen: finales Logo für Vordergrund und Splash, Signing-Konzept.
+8. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
 
 Der Abschnitt 7 beschreibt die weitere Reihenfolge der Funktionen.
