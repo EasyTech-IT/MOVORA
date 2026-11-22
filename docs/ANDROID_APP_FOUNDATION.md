@@ -113,4 +113,14 @@ Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin. Es 
 7. Erledigt: Branding in Navy `#0B203C` und Teal `#2EB8AC` (aus `app/globals.css`) für Ionic-Theme (`src/theme/variables.css`) und Launcher-Hintergrund. Das Standard-Raster-Drawable wurde entfernt. Logo: Teal-„M“ mit weißem Punkt als Adaptive-Icon-Vordergrund (PNG pro Dichte für Android 7.x, Vektor für den Splash in `drawable/splash.xml`). Das Logo ist ein Platzhalter aus Vektorformen, kein finaler Markenentwurf. Offen: Signing-Konzept.
 8. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
 
+## 10. Signing-Konzept
+
+- **Play App Signing:** Google verwaltet den App-Signing-Schlüssel. Lokal oder im CI liegt nur der **Upload-Schlüssel**. Verliert man ihn, kann Google ihn zurücksetzen.
+- **Keystore:** wird noch nicht erzeugt. Er wird erst bei der Release-Vorbereitung nach Freigabe angelegt. Ablage außerhalb des Repos, zum Beispiel in einem Passwortmanager oder Secret-Store.
+- **Konfiguration:** Zugangsdaten nur über Umgebungsvariablen oder eine lokale, git-ignorierte Datei (`android/keystore.properties`). Nicht in `build.gradle` hinterlegen.
+- **Debug-Builds:** nutzen den Standard-Debug-Schlüssel von Android. Sie sind nicht für den Store bestimmt.
+- **Backup:** Keystore und Passwörter an zwei getrennten Orten sichern. Eine Wiederherstellung über den Play-Support ist nur für den Upload-Schlüssel möglich.
+- **Versionierung:** `versionCode` wird bei jedem Upload erhöht. `versionName` folgt der App-Version.
+
+
 Der Abschnitt 7 beschreibt die weitere Reihenfolge der Funktionen.
