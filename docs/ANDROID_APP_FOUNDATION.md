@@ -1,6 +1,6 @@
 # MOVORA – Android-App (technische Grundlage)
 
-> **Status: Konzept.** Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
+> **Status: Konzept, Projektform entschieden (getrenntes Projekt).** Das Scaffolding wartet auf die Freigabe von App-ID und Firebase (Abschnitt 8). Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
 
 ## 1. Empfehlung zur Architektur
 
@@ -92,8 +92,22 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 
 ## 8. Offene Punkte für Ihre Freigabe
 
-- Projekt getrennt (empfohlen) oder Monorepo.
-- Reservierung der App-ID `de.movora.app` und Domain-Prüfung.
-- Firebase für Push: Zustimmung und Datenschutzfolgenabschätzung.
-- Mindest-Android-Version (API 24 vorgeschlagen).
-- Rechtliche Prüfung Play Billing für Premium.
+| Punkt | Vorschlag | Stand |
+| --- | --- | --- |
+| Projektform | getrenntes Projekt | entschieden |
+| App-ID `de.movora.app` und Domain-Prüfung | `de.movora.app` | offen |
+| Firebase für Push (Zustimmung und DSFA) | Firebase Cloud Messaging | offen |
+| Mindest-Android-Version | API 24 | offen |
+| Rechtliche Prüfung Play Billing für Premium | vor Premium-Start | offen |
+
+## 9. Setup-Plan nach Freigabe (noch nicht ausgeführt)
+
+Diese Schritte legen Abhängigkeiten an und werden erst nach Freigabe von App-ID und Firebase ausgeführt. Das Projekt liegt neben dem Web-Projekt, nicht darin.
+
+1. Gerüst mit der offiziellen Ionic-React-Vorlage (`npm create ionic@latest`, Typ React, Capacitor aktiviert) im Ordner `movora-android`.
+2. Capacitor-Android-Plattform hinzufügen (`npx cap add android`) und App-ID sowie Anzeigename in `capacitor.config.ts` setzen.
+3. Supabase-Client mit `@capacitor/preferences` oder einem Secure-Storage-Plugin als Session-Speicher. Zugangsdaten nur über Umgebungsvariablen, keine Werte im Repository.
+4. Prüfung: `npm run build`, `npx cap sync android`, Lauf im Emulator, und ein Smoke-Test für Login und Tab-Navigation.
+5. Erst danach Firebase einbinden. Dafür `google-services.json` nur lokal oder im Secret-Store ablegen.
+
+Der Abschnitt 7 beschreibt die weitere Reihenfolge der Funktionen.
