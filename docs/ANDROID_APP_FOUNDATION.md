@@ -31,7 +31,7 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 | Demo-Daten (`lib/demo-data.ts`) | ja, als Vorlage | Markierung `isDemo` beibehalten |
 | shadcn-Komponenten | nein | Ionic-Komponenten verwenden |
 | Tailwind-Design-Tokens (Navy, Teal) | ja, als CSS-Variablen | Werte aus `app/globals.css` |
-| Auth-Seiten, Proxy, `requireClaims` | nein | Serverseitig nicht übertragbar, App nutzt Supabase-Session mit sicherem Speicher |
+| Auth-Seiten, Proxy, `requireClaims` | nein | Serverseitig nicht übertragbar, App nutzt Supabase-Session (Speicher siehe §9) |
 | MapLibre-Komponente | teilweise | In der WebView testen, Offline-Kacheln prüfen |
 
 ## 3. Projektgrundlage (nach Freigabe)
@@ -49,7 +49,7 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 | Android-Navigation | Ionic-Tabs, Zurück-Taste über Capacitor-Back-Button |
 | Touch | Ziele mindestens 48 dp, Ionic-Gesten |
 | Responsive | Ionic-Grid, Tests auf kleinen und großen Geräten |
-| Sichere Session | Supabase-Session im Capacitor-Secure-Storage (kein `localStorage` für Tokens) |
+| Sichere Session | Supabase-Session über Capacitor Preferences (kein `localStorage`). Keine Verschlüsselung, siehe §9 Punkt 5 |
 | Kamera und Standort | Nur bei Bedarf anfragen, Begründung im Dialog, Ablehnung ohne Funktionsverlust |
 | Push | Firebase Cloud Messaging über Capacitor-Plugin (Freigabe und Datenschutzprüfung nötig) |
 | Offline | Nur für Anbieterprofile und Haltestellen-Stammdaten, nie für Scores ohne Zeitstempel |
@@ -83,7 +83,7 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 ## 7. Umsetzungsreihenfolge (nach Freigabe)
 
 1. Projekt-Gerüst mit Ionic, Capacitor und Android-Plattform, lauffähig im Emulator.
-2. Login mit Supabase und sicherem Session-Speicher.
+2. Login mit Supabase und Session-Speicher (Preferences, siehe §9 Punkt 5).
 3. Tab-Navigation und Anbietersuche (mit Demo-Daten).
 4. Kartenansicht und Anbieterprofile.
 5. Bewertungen, Favoriten, Benachrichtigungen.
@@ -102,13 +102,13 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 
 ## 9. Setup-Stand
 
-Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin.
+Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin. Es hat ein eigenes Git-Repo (Entscheidung des Nutzers).
 
 1. Erledigt: Ionic-React-Gerüst mit Capacitor, App-ID `de.movora.app`, Anzeigename `MOVORA`, Mindest-SDK 24.
 2. Erledigt: Android-Plattform (`cap add android`), `cap sync android` und `gradlew assembleDebug` laufen durch.
 3. Erledigt: Supabase-Client mit Umgebungsvariablen (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, Vorlage in `.env.example`). Ohne Konfiguration bleibt die App gesperrt (Fail closed).
 4. Erledigt: Login (Anmeldung und Registrierung), geschützte Tabs (Anbieter mit Demo-Daten, Profil mit Abmeldung). Unit-Test für das Fail-closed-Verhalten.
-5. Offen: Session-Speicher. Aktuell nutzt der Client den Standard-Speicher der WebView. Vor Produktivbetrieb muss ein verschlüsselter Speicher eingebaut werden (Secure-Storage-Plugin, Freigabe nötig).
+5. Erledigt mit Einschränkung: Session-Speicher über `@capacitor/preferences` (`src/lib/session-storage.ts`). Der Nutzer hat diese Variante gewählt. Preferences speichert **nicht verschlüsselt**. Die Anforderung „Sichere Session-Verwaltung“ ist damit nur teilweise erfüllt. Vor Produktivbetrieb ist ein verschlüsselter Speicher (Secure-Storage-Plugin, Freigabe nötig) zu prüfen.
 6. Offen: Emulator-Lauf und Smoke-Test mit echtem Supabase-Testprojekt. Icons, Splash, Signing.
 7. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
 
