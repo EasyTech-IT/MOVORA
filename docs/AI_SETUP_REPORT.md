@@ -67,7 +67,7 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 | `npx tsc --noEmit` | bestanden |
 | `npm run lint` | bestanden |
 | `npm run build` | bestanden |
-| Playwright-Tests (`npm test`) | 11 bestanden, 1 übersprungen (Session-Test ohne `E2E_USER_EMAIL`/`E2E_USER_PASSWORD`) |
+| Playwright-Tests (`npm test`) | 16 bestanden, 1 übersprungen (Stand Commit `5524d4e`; Session-Test ohne `E2E_USER_EMAIL`/`E2E_USER_PASSWORD`) |
 | Erkennung der Rollen durch Copilot | nicht geprüft. Es ist eine Sichtprüfung im VS-Code-Chat nötig. |
 
 ## 5a. Playwright-Einrichtung
@@ -79,8 +79,9 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
   - Port 3001: leere Supabase-Variablen (`.next-noenv`). Projekt `missing-env`.
   - Port 3002: ungültige URL `not-a-valid-url` (`.next-invalid`). Projekt `invalid-env`.
 - Start: `npm test`. Die Konfiguration startet die Server automatisch, außer `PLAYWRIGHT_BASE_URL` ist gesetzt. Dann wird nur gegen diese URL getestet, ohne die Server mit leerer oder ungültiger Konfiguration.
+- Drei Projekte (`chromium`, `missing-env`, `invalid-env`), die zu den drei Servern passen.
 - Testdateien:
-  - `public-pages.spec.ts`: Startseite, Navigation, Login- und Registrierungsseite.
+  - `public-pages.spec.ts`: Startseite, Navigation, Login- und Registrierungsseite (Prompt 7), Suche und Pagination, Anbieterprofil, unbekannter Slug (Prompt 8).
   - `protected-routes.spec.ts`: `/protected` ohne Session leitet auf den Login um.
   - `missing-env.spec.ts`: fehlende Konfiguration. Geschützte Seite wird verweigert, Startseite und Login bleiben erreichbar.
   - `invalid-env.spec.ts`: ungültige Konfiguration. Kein Absturz (Status unter 500), Weiterleitung auf den Login, Konfigurationshinweis auf der Startseite.
@@ -100,6 +101,19 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 - Designtokens Navy, Teal und Weiß in `app/globals.css` (Commit `a2e6268`). Textkontraste mindestens 5,5:1.
 - Review-Threads von PR #1 (Migrationszuständigkeit, GTFS-Validatoren) sind im Code korrigiert. Auf GitHub noch nicht als erledigt markiert.
 
+## 5d. Roadmap-Stand (Prompts 7 bis 12)
+
+| Prompt | Stand | Nachweis |
+|---|---|---|
+| 7 Startseite und Navigation | umgesetzt (Commit `935fb90`) | [PROMPT_7_PLAN.md](./PROMPT_7_PLAN.md), `app/page.tsx`, `components/movora/*` |
+| 8 Suche und Anbieterprofile | umgesetzt, nur Demo-Daten (Commit `5524d4e`) | [PROMPT_8_PLAN.md](./PROMPT_8_PLAN.md), `app/entdecken/`, `app/anbieter/[slug]/` |
+| 9 Stripe und Abonnements | Konzept (Commit `24048f3`), keine Zahlungen | [PAYMENT_ARCHITECTURE.md](./PAYMENT_ARCHITECTURE.md), [SUBSCRIPTION_MODEL.md](./SUBSCRIPTION_MODEL.md) |
+| 10 B2B-Dashboard | Konzept (Commit `1719db9`), keine Implementierung ohne Datenbasis | [B2B_DASHBOARD_CONCEPT.md](./B2B_DASHBOARD_CONCEPT.md) |
+| 11 Admin und Moderation | Architektur (Commit `1719db9`), wartet auf Freigabe | [ADMIN_MODERATION_ARCHITECTURE.md](./ADMIN_MODERATION_ARCHITECTURE.md) |
+| 12 Android-App | Grundlage (Commit `1719db9`), wartet auf Freigabe | [ANDROID_APP_FOUNDATION.md](./ANDROID_APP_FOUNDATION.md) |
+
+Die Suche und die Profile arbeiten nur mit fiktiven Demo-Daten (`lib/demo-data.ts`, `isDemo: true`). Scores und Datenaktualität werden nicht angezeigt, weil noch keine Datenbasis existiert. Unbekannte Anbieter-Slugs liefern HTTP 200 mit Hinweis (Soft-404, siehe PROMPT_8_PLAN).
+
 ## 6. Offene Punkte
 
 - Der Session-Test (`authenticated.spec.ts`) ist übersprungen. Er braucht ein Testkonto in einer separaten Supabase-Testumgebung und die Variablen `E2E_USER_EMAIL` und `E2E_USER_PASSWORD`. Es wurden keine Zugangsdaten hinterlegt.
@@ -110,7 +124,9 @@ Feature-Umsetzung hat keinen eigenen Agenten. Sie läuft über den Prompt `imple
 - Git-E-Mail `1-1@notify.easytechit.de` ist nicht bestätigt.
 - Der Feature-Branch ist nicht nach `main` gemergt.
 - Starter-Reste (`components/tutorial/*`, `VERCEL_*`-Abfragen) sind noch vorhanden.
-- Die PR-Beschreibung von PR #1 ist veraltet und muss manuell aktualisiert werden.
+- Die PR-Beschreibung von PR #1 ist veraltet und muss manuell aktualisiert werden (9 Agenten, 14 Skills, 5 Prompts, 3 Playwright-Projekte, 16 bestanden, 1 übersprungen).
+- Prompts 11 und 12 sind nur konzipiert und warten auf Freigabe.
+- Produktionsstatus von `main` unbekannt (Auto-Deployment nicht geprüft). Davon hängt ab, ob der Session-Test vor dem Merge stehen muss.
 - Scoring-Engine: Test-Runner (Vitest oder Playwright) ist nicht entschieden.
 
 ## 7. Nächste Schritte
