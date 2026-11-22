@@ -1,6 +1,6 @@
 # MOVORA – Android-App (technische Grundlage)
 
-> **Status: Konzept, Projektform entschieden (getrenntes Projekt).** Das Scaffolding wartet auf die Freigabe von App-ID und Firebase (Abschnitt 8). Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
+> **Status: Scaffolding und Login/Tabs umgesetzt, Session-Speicher und Emulator-Test offen.** Firebase ist noch nicht eingebunden (DSFA offen). Keine Veröffentlichung ohne Freigabe. Es werden keine Signierschlüssel erzeugt und keine Store-Einträge angelegt.
 
 ## 1. Empfehlung zur Architektur
 
@@ -95,19 +95,21 @@ Die Umstellung auf ein Monorepo ist eine eigene Entscheidung und nicht Teil dies
 | Punkt | Vorschlag | Stand |
 | --- | --- | --- |
 | Projektform | getrenntes Projekt | entschieden |
-| App-ID `de.movora.app` und Domain-Prüfung | `de.movora.app` | offen |
-| Firebase für Push (Zustimmung und DSFA) | Firebase Cloud Messaging | offen |
-| Mindest-Android-Version | API 24 | offen |
+| App-ID `de.movora.app` und Domain-Prüfung | `de.movora.app` | freigegeben, Domain-Prüfung offen |
+| Firebase für Push (Zustimmung und DSFA) | Firebase Cloud Messaging | Zustimmung erteilt, DSFA offen, noch nicht eingebunden |
+| Mindest-Android-Version | API 24 | freigegeben |
 | Rechtliche Prüfung Play Billing für Premium | vor Premium-Start | offen |
 
-## 9. Setup-Plan nach Freigabe (noch nicht ausgeführt)
+## 9. Setup-Stand
 
-Diese Schritte legen Abhängigkeiten an und werden erst nach Freigabe von App-ID und Firebase ausgeführt. Das Projekt liegt neben dem Web-Projekt, nicht darin.
+Das Projekt liegt neben dem Web-Projekt unter `movora-android`, nicht darin.
 
-1. Gerüst mit der offiziellen Ionic-React-Vorlage (`npm create ionic@latest`, Typ React, Capacitor aktiviert) im Ordner `movora-android`.
-2. Capacitor-Android-Plattform hinzufügen (`npx cap add android`) und App-ID sowie Anzeigename in `capacitor.config.ts` setzen.
-3. Supabase-Client mit `@capacitor/preferences` oder einem Secure-Storage-Plugin als Session-Speicher. Zugangsdaten nur über Umgebungsvariablen, keine Werte im Repository.
-4. Prüfung: `npm run build`, `npx cap sync android`, Lauf im Emulator, und ein Smoke-Test für Login und Tab-Navigation.
-5. Erst danach Firebase einbinden. Dafür `google-services.json` nur lokal oder im Secret-Store ablegen.
+1. Erledigt: Ionic-React-Gerüst mit Capacitor, App-ID `de.movora.app`, Anzeigename `MOVORA`, Mindest-SDK 24.
+2. Erledigt: Android-Plattform (`cap add android`), `cap sync android` und `gradlew assembleDebug` laufen durch.
+3. Erledigt: Supabase-Client mit Umgebungsvariablen (`VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`, Vorlage in `.env.example`). Ohne Konfiguration bleibt die App gesperrt (Fail closed).
+4. Erledigt: Login (Anmeldung und Registrierung), geschützte Tabs (Anbieter mit Demo-Daten, Profil mit Abmeldung). Unit-Test für das Fail-closed-Verhalten.
+5. Offen: Session-Speicher. Aktuell nutzt der Client den Standard-Speicher der WebView. Vor Produktivbetrieb muss ein verschlüsselter Speicher eingebaut werden (Secure-Storage-Plugin, Freigabe nötig).
+6. Offen: Emulator-Lauf und Smoke-Test mit echtem Supabase-Testprojekt. Icons, Splash, Signing.
+7. Offen: Firebase erst nach abgeschlossener DSFA. `google-services.json` nur lokal oder im Secret-Store.
 
 Der Abschnitt 7 beschreibt die weitere Reihenfolge der Funktionen.
