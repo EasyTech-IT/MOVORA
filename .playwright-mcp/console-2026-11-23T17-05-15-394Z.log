@@ -1,0 +1,10 @@
+[     182ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/0f1j2_2b-deqs.css:1
+[     261ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/0-2tribn88550.js:1
+[     264ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/41ivj94ni1bjw.js:1
+[     264ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/3enhb1imx24l7.js:1
+[     634ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/3enhb1imx24l7.js:1
+[     665ms] ChunkLoadError: Failed to load chunk /_next/static/chunks/3enhb1imx24l7.js from module 64893
+    at http://localhost:3100/_next/static/chunks/turbopack-2u1d16houkiyo.js:1:5286
+[     755ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/41ivj94ni1bjw.js:1
+[     848ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/0-2tribn88550.js:1
+[    3863ms] [WARNING] The resource http://localhost:3100/_next/static/media/d8aeca813a9ab546-s.p.18rizl4rsrl42.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3100/:1

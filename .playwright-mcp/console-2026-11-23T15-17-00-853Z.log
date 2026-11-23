@@ -1,0 +1,4 @@
+[     385ms] [LOG] [DataGrail Consent] something was pushed to the data layer before the container initialized, so tags may have fired ahead of consent defaults. @ https://www.googletagmanager.com/gtm.js?id=GTM-MKSKW3:1624
+[    3540ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://www.threatdown.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSpUsX2ubVqaialRqpGxQZKRWRYA+t0jQw==:5
+[    4072ms] [ERROR] Quiz data not available @ https://www.threatdown.com/wp-content/plugins/simple-quiz-builder/assets/quiz-script.js?m=a5788cd6a982g:4
+[    4138ms] [LOG] [DataGrail Consent] a consent banner is already loaded on this page - not loading a second one. Consent defaults are still being set from this container. @ https://www.googletagmanager.com/gtm.js?id=GTM-NQTBNS69:823

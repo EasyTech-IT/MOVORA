@@ -1,0 +1,4 @@
+[     357ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:2:19160) @ http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:1
+[     357ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:2:19160) @ http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:1

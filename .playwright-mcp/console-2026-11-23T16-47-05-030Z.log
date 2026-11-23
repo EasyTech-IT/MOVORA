@@ -1,0 +1,333 @@
+[     415ms] [LOG] %cSuccess - dns%c
+
+[17:47:05]%c The dns job succeeded in 345ms
+%cRun %cwindow.webCheck['dns']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     415ms] [LOG] %cSuccess - security-txt%c
+
+[17:47:05]%c The security-txt job succeeded in 346ms
+%cRun %cwindow.webCheck['security-txt']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     415ms] [LOG] %cError - mail-config%c
+
+[17:47:05]%c The mail-config job failed after 346ms, with the following error:%c
+No mail server in use on this domain background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     415ms] [LOG] %cSuccess - breaches%c
+
+[17:47:05]%c The breaches job succeeded in 346ms
+%cRun %cwindow.webCheck['breaches']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cError - txt-records%c
+
+[17:47:05]%c The txt-records job failed after 346ms, with the following error:%c
+No TXT records for this host background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - redirects%c
+
+[17:47:05]%c The redirects job succeeded in 346ms
+%cRun %cwindow.webCheck['redirects']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - caa-records%c
+
+[17:47:05]%c The caa-records job succeeded in 346ms
+%cRun %cwindow.webCheck['caa-records']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - status%c
+
+[17:47:05]%c The status job succeeded in 346ms
+%cRun %cwindow.webCheck['status']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - tls-connection%c
+
+[17:47:05]%c The tls-connection job succeeded in 346ms
+%cRun %cwindow.webCheck['tls-connection']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - whois-lookup%c
+
+[17:47:05]%c The whois-lookup job succeeded in 346ms
+%cRun %cwindow.webCheck['whois-lookup']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - domain-info%c
+
+[17:47:05]%c The domain-info job succeeded in 346ms
+%cRun %cwindow.webCheck['domain-info']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - carbon%c
+
+[17:47:05]%c The carbon job succeeded in 347ms
+%cRun %cwindow.webCheck['carbon']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     416ms] [LOG] %cSuccess - dnssec%c
+
+[17:47:05]%c The dnssec job succeeded in 347ms
+%cRun %cwindow.webCheck['dnssec']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     417ms] [LOG] %cError - trace-route%c
+
+[17:47:05]%c The trace-route job failed after 347ms, with the following error:%c
+Traceroute is not installed in this environment. Install via your package manager, or run web-check via Docker. background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     422ms] [LOG] %cSuccess - dns-server%c
+
+[17:47:05]%c The dns-server job succeeded in 353ms
+%cRun %cwindow.webCheck['dns-server']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - ssl%c
+
+[17:47:05]%c The ssl job succeeded in 353ms
+%cRun %cwindow.webCheck['ssl']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - robots-txt%c
+
+[17:47:05]%c The robots-txt job succeeded in 353ms
+%cRun %cwindow.webCheck['robots-txt']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - firewall%c
+
+[17:47:05]%c The firewall job succeeded in 353ms
+%cRun %cwindow.webCheck['firewall']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - http-security%c
+
+[17:47:05]%c The http-security job succeeded in 353ms
+%cRun %cwindow.webCheck['http-security']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - cookies%c
+
+[17:47:05]%c The cookies job succeeded in 354ms
+%cRun %cwindow.webCheck['cookies']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - headers%c
+
+[17:47:05]%c The headers job succeeded in 354ms
+%cRun %cwindow.webCheck['headers']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     423ms] [LOG] %cSuccess - hsts%c
+
+[17:47:05]%c The hsts job succeeded in 354ms
+%cRun %cwindow.webCheck['hsts']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     569ms] [LOG] %cSuccess - subdomains%c
+
+[17:47:05]%c The subdomains job succeeded in 499ms
+%cRun %cwindow.webCheck['subdomains']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     631ms] [LOG] %cSuccess - tls-security-audit%c
+
+[17:47:05]%c The tls-security-audit job succeeded in 562ms
+%cRun %cwindow.webCheck['tls-security-audit']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     631ms] [LOG] %cSuccess - tls-client-compat%c
+
+[17:47:05]%c The tls-client-compat job succeeded in 562ms
+%cRun %cwindow.webCheck['tls-client-compat']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     745ms] [LOG] %cSuccess - location%c
+
+[17:47:05]%c The location job succeeded in 676ms
+%cRun %cwindow.webCheck['location']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     746ms] [LOG] %cSuccess - hosts%c
+
+[17:47:05]%c The hosts job succeeded in 676ms
+%cRun %cwindow.webCheck['hosts']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     746ms] [LOG] %cSuccess - server-info%c
+
+[17:47:05]%c The server-info job succeeded in 676ms
+%cRun %cwindow.webCheck['server-info']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     746ms] [LOG] %cSuccess - vulnerabilities%c
+
+[17:47:05]%c The vulnerabilities job succeeded in 676ms
+%cRun %cwindow.webCheck['vulnerabilities']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     746ms] [LOG] %cSuccess - threats%c
+
+[17:47:05]%c The threats job succeeded in 676ms
+%cRun %cwindow.webCheck['threats']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[     944ms] [LOG] %cSuccess - linked-pages%c
+
+[17:47:05]%c The linked-pages job succeeded in 874ms
+%cRun %cwindow.webCheck['linked-pages']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    1004ms] [LOG] %cSuccess - social-tags%c
+
+[17:47:06]%c The social-tags job succeeded in 934ms
+%cRun %cwindow.webCheck['social-tags']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    1067ms] [LOG] %cSuccess - archives%c
+
+[17:47:06]%c The archives job succeeded in 997ms
+%cRun %cwindow.webCheck['archives']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    1154ms] [LOG] %cError - rank%c
+
+[17:47:06]%c The rank job failed after 1084ms, with the following error:%c
+www.malwarebytes.com isn't ranked in the top 1 million sites yet background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    1324ms] [LOG] %cSuccess - social-presence%c
+
+[17:47:06]%c The social-presence job succeeded in 1254ms
+%cRun %cwindow.webCheck['social-presence']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    1327ms] [LOG] %cSuccess - mixed-content%c
+
+[17:47:06]%c The mixed-content job succeeded in 1258ms
+%cRun %cwindow.webCheck['mixed-content']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    2149ms] [LOG] %cSuccess - ports%c
+
+[17:47:07]%c The ports job succeeded in 2079ms
+%cRun %cwindow.webCheck['ports']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    3263ms] [LOG] %cSuccess - block-lists%c
+
+[17:47:08]%c The block-lists job succeeded in 3193ms
+%cRun %cwindow.webCheck['block-lists']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[    6346ms] [LOG] %cSuccess - sitemap%c
+
+[17:47:11]%c The sitemap job succeeded in 6277ms
+%cRun %cwindow.webCheck['sitemap']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[   11011ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://web-check.as93.net/.netlify/functions/screenshot?url=www.malwarebytes.com:1
+[   11012ms] [LOG] %cError - screenshot%c
+
+[17:47:16]%c The screenshot job failed after 10942ms, with the following error:%c
+Navigation timeout of 8000 ms exceeded background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[   15322ms] [LOG] %cSuccess - trackers%c
+
+[17:47:20]%c The trackers job succeeded in 15252ms
+%cRun %cwindow.webCheck['trackers']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[   19191ms] [LOG] %cSuccess - quality%c
+
+[17:47:24]%c The quality job succeeded in 19122ms
+%cRun %cwindow.webCheck['quality']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[   40581ms] [LOG] %cSuccess - tech-stack%c
+
+[17:47:45]%c The tech-stack job succeeded in 40511ms
+%cRun %cwindow.webCheck['tech-stack']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  361836ms] [LOG] %cSuccess - dns%c
+
+[17:53:06]%c The dns job succeeded in 426ms
+%cRun %cwindow.webCheck['dns']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  362137ms] [LOG] %cSuccess - txt-records%c
+
+[17:53:07]%c The txt-records job succeeded in 726ms
+%cRun %cwindow.webCheck['txt-records']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  363148ms] [LOG] %cSuccess - mail-config%c
+
+[17:53:08]%c The mail-config job succeeded in 1737ms
+%cRun %cwindow.webCheck['mail-config']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  365111ms] [LOG] %cSuccess - block-lists%c
+
+[17:53:10]%c The block-lists job succeeded in 3701ms
+%cRun %cwindow.webCheck['block-lists']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  417967ms] [LOG] %cSuccess - dns%c
+
+[17:54:02]%c The dns job succeeded in 191ms
+%cRun %cwindow.webCheck['dns']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  418156ms] [LOG] %cSuccess - txt-records%c
+
+[17:54:03]%c The txt-records job succeeded in 379ms
+%cRun %cwindow.webCheck['txt-records']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  418394ms] [LOG] %cSuccess - mail-config%c
+
+[17:54:03]%c The mail-config job succeeded in 617ms
+%cRun %cwindow.webCheck['mail-config']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  420988ms] [LOG] %cSuccess - block-lists%c
+
+[17:54:06]%c The block-lists job succeeded in 3211ms
+%cRun %cwindow.webCheck['block-lists']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448522ms] [LOG] %cSuccess - sitemap%c
+
+[17:54:33]%c The sitemap job succeeded in 1353ms
+%cRun %cwindow.webCheck['sitemap']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448556ms] [LOG] %cSuccess - redirects%c
+
+[17:54:33]%c The redirects job succeeded in 1387ms
+%cRun %cwindow.webCheck['redirects']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448589ms] [LOG] %cError - rank%c
+
+[17:54:33]%c The rank job failed after 1420ms, with the following error:%c
+easytechit.de isn't ranked in the top 1 million sites yet background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448614ms] [LOG] %cSuccess - carbon%c
+
+[17:54:33]%c The carbon job succeeded in 1445ms
+%cRun %cwindow.webCheck['carbon']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448658ms] [LOG] %cSuccess - robots-txt%c
+
+[17:54:33]%c The robots-txt job succeeded in 1490ms
+%cRun %cwindow.webCheck['robots-txt']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  448823ms] [LOG] %cError - archives%c
+
+[17:54:33]%c The archives job failed after 1655ms, with the following error:%c
+Site has never before been archived via the Wayback Machine background:#f80363;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#f80363; color:#f80363; color:#f6f000; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  449114ms] [LOG] %cSuccess - linked-pages%c
+
+[17:54:34]%c The linked-pages job succeeded in 1945ms
+%cRun %cwindow.webCheck['linked-pages']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  449253ms] [LOG] %cSuccess - social-tags%c
+
+[17:54:34]%c The social-tags job succeeded in 2084ms
+%cRun %cwindow.webCheck['social-tags']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  458166ms] [LOG] %cSuccess - screenshot%c
+
+[17:54:43]%c The screenshot job succeeded in 10997ms
+%cRun %cwindow.webCheck['screenshot']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  471338ms] [LOG] %cSuccess - quality%c
+
+[17:54:56]%c The quality job succeeded in 24170ms
+%cRun %cwindow.webCheck['quality']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515717ms] [LOG] %cSuccess - caa-records%c
+
+[17:55:40]%c The caa-records job succeeded in 419ms
+%cRun %cwindow.webCheck['caa-records']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515749ms] [LOG] %cSuccess - breaches%c
+
+[17:55:40]%c The breaches job succeeded in 451ms
+%cRun %cwindow.webCheck['breaches']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515823ms] [LOG] %cSuccess - dnssec%c
+
+[17:55:40]%c The dnssec job succeeded in 525ms
+%cRun %cwindow.webCheck['dnssec']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515856ms] [LOG] %cSuccess - ssl%c
+
+[17:55:40]%c The ssl job succeeded in 559ms
+%cRun %cwindow.webCheck['ssl']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515891ms] [LOG] %cSuccess - threats%c
+
+[17:55:40]%c The threats job succeeded in 594ms
+%cRun %cwindow.webCheck['threats']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515960ms] [LOG] %cSuccess - hosts%c
+
+[17:55:40]%c The hosts job succeeded in 662ms
+%cRun %cwindow.webCheck['hosts']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515960ms] [LOG] %cSuccess - server-info%c
+
+[17:55:40]%c The server-info job succeeded in 662ms
+%cRun %cwindow.webCheck['server-info']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515960ms] [LOG] %cSuccess - vulnerabilities%c
+
+[17:55:40]%c The vulnerabilities job succeeded in 662ms
+%cRun %cwindow.webCheck['vulnerabilities']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  515988ms] [LOG] %cSuccess - headers%c
+
+[17:55:41]%c The headers job succeeded in 690ms
+%cRun %cwindow.webCheck['headers']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516034ms] [LOG] %cSuccess - mixed-content%c
+
+[17:55:41]%c The mixed-content job succeeded in 736ms
+%cRun %cwindow.webCheck['mixed-content']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516077ms] [LOG] %cSuccess - firewall%c
+
+[17:55:41]%c The firewall job succeeded in 779ms
+%cRun %cwindow.webCheck['firewall']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516077ms] [LOG] %cSuccess - http-security%c
+
+[17:55:41]%c The http-security job succeeded in 780ms
+%cRun %cwindow.webCheck['http-security']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516077ms] [LOG] %cSuccess - cookies%c
+
+[17:55:41]%c The cookies job succeeded in 780ms
+%cRun %cwindow.webCheck['cookies']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516178ms] [LOG] %cSuccess - tls-connection%c
+
+[17:55:41]%c The tls-connection job succeeded in 881ms
+%cRun %cwindow.webCheck['tls-connection']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516201ms] [LOG] %cSuccess - hsts%c
+
+[17:55:41]%c The hsts job succeeded in 903ms
+%cRun %cwindow.webCheck['hsts']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  516256ms] [LOG] %cSuccess - security-txt%c
+
+[17:55:41]%c The security-txt job succeeded in 958ms
+%cRun %cwindow.webCheck['security-txt']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  517255ms] [LOG] %cSuccess - ports%c
+
+[17:55:42]%c The ports job succeeded in 1957ms
+%cRun %cwindow.webCheck['ports']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  519567ms] [LOG] %cSuccess - block-lists%c
+
+[17:55:44]%c The block-lists job succeeded in 4270ms
+%cRun %cwindow.webCheck['block-lists']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  519963ms] [LOG] %cSuccess - trackers%c
+
+[17:55:44]%c The trackers job succeeded in 4666ms
+%cRun %cwindow.webCheck['trackers']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[  524077ms] [LOG] %cSuccess - social-presence%c
+
+[17:55:49]%c The social-presence job succeeded in 8779ms
+%cRun %cwindow.webCheck['social-presence']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[ 1128300ms] [LOG] %cSuccess - tls-security-audit%c
+
+[18:05:53]%c The tls-security-audit job succeeded in 613003ms
+%cRun %cwindow.webCheck['tls-security-audit']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647
+[ 1128300ms] [LOG] %cSuccess - tls-client-compat%c
+
+[18:05:53]%c The tls-client-compat job succeeded in 613003ms
+%cRun %cwindow.webCheck['tls-client-compat']%c to inspect the raw results background:#20e253;color:#000;padding:4px 8px;font-size:16px;border-radius:2px; font-weight:bold;color:#20e253; color:#20e253; color:#1d8242; color:#1d8242;text-decoration:underline; color:#1d8242; @ https://web-check.as93.net/_astro/main.DjN6d4P1.js?dpl=6b042874f116ebb8b9921310:1647

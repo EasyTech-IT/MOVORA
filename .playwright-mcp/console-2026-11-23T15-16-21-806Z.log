@@ -1,0 +1,3 @@
+[      -4ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ chrome-error://chromewebdata/:1
+[    1544ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://staging-de.malwarebytes.com/:1
+[    1581ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://staging-de.malwarebytes.com/favicon.ico:1
