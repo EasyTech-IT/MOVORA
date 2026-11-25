@@ -1,0 +1,61 @@
+[     278ms] [WARNING] Manifest: scope_extensions entry ignored, type object expected. @ https://domain-locker.com/manifest.json:1
+[     278ms] [WARNING] Manifest: scope_extensions entry ignored, type object expected. @ https://domain-locker.com/manifest.json:1
+[     636ms] [LOG] 
+%c🔐 Domain Locker V0.3.8%c
+Licensed under MIT, © Alicia Sykes 2025.
+Source: github.com/lissy93/domain-locker
+ color:#a78bfa; background:#0b1021; font-size:1.5rem; padding:0.15rem 0.25rem; margin: 1rem auto 0.5rem auto; font-family: Helvetica; border: 2px solid #a78bfa; border-radius: 4px;font-weight: bold; text-shadow: 1px 1px 1px #a78bfabf; color: #a78bfa; font-size:10px; font-family: Helvetica; margin: 0; @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     637ms] [LOG] %cType color:#1fe3f1; font-weight: bold; managed @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     637ms] [LOG] %cApp Version color:#1fe3f1; font-weight: bold; 0.3.8 @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     637ms] [LOG] %cDatabase color:#1fe3f1; font-weight: bold; Supabase @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cProtocol color:#1fe3f1; font-weight: bold; https: @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cHost color:#1fe3f1; font-weight: bold; https://domain-locker.com @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cPath color:#1fe3f1; font-weight: bold; / @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cDate Fetched color:#1fe3f1; font-weight: bold; 1795452586136 @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cOS color:#1fe3f1; font-weight: bold; Win32 @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cBrowser color:#1fe3f1; font-weight: bold; Mozilla @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     638ms] [LOG] %cLanguage color:#1fe3f1; font-weight: bold; de-DE @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     639ms] [LOG] %cDebug Tools color:#1fe3f1; font-weight: bold; https://domain-locker.com/advanced @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     639ms] [LOG] %cSupport Docs color:#1fe3f1; font-weight: bold; https://domain-locker.com/about/support @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     639ms] [LOG] %cGitHub color:#1fe3f1; font-weight: bold; https://github.com/lissy93/domain-locker @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     787ms] [ERROR] Error: No Supabase session token available
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:124:1910
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:20:33043
+    at a._next (https://domain-locker.com/assets/index-BRmYuaHC.js:20:10200)
+    at t.next (https://domain-locker.com/assets/index-BRmYuaHC.js:20:7104)
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:20:21540
+    at a.invoke (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25001)
+    at Object.onInvoke (https://domain-locker.com/assets/index-BRmYuaHC.js:25:27540)
+    at a.invoke (https://domain-locker.com/assets/index-BRmYuaHC.js:14:24941)
+    at n.run (https://domain-locker.com/assets/index-BRmYuaHC.js:14:19574)
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:14:14353
+    at a.invokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25619)
+    at Object.onInvokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:25:27356)
+    at a.invokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25540)
+    at n.runTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:20214)
+    at y (https://domain-locker.com/assets/index-BRmYuaHC.js:14:27800) @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[     787ms] [LOG] %cThis occurred at 17:49:46 on Mon Nov 23 2026, in HomePageComponent.triggerBackgroundUpdate
+Please reference the debugging documentation for next steps: http://domain-locker.com/about/developing/debugging font-size:10px; color:#f9a939; @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[    3274ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ https://domain-locker.com/login?newUser=true:1
+[    3275ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ https://domain-locker.com/login?newUser=true:1
+[    5275ms] [ERROR] Error: No Supabase session token available
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:124:1910
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:20:33043
+    at a._next (https://domain-locker.com/assets/index-BRmYuaHC.js:20:10200)
+    at t.next (https://domain-locker.com/assets/index-BRmYuaHC.js:20:7104)
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:20:21540
+    at a.invoke (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25001)
+    at Object.onInvoke (https://domain-locker.com/assets/index-BRmYuaHC.js:25:27540)
+    at a.invoke (https://domain-locker.com/assets/index-BRmYuaHC.js:14:24941)
+    at n.run (https://domain-locker.com/assets/index-BRmYuaHC.js:14:19574)
+    at https://domain-locker.com/assets/index-BRmYuaHC.js:14:14353
+    at a.invokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25619)
+    at Object.onInvokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:25:27356)
+    at a.invokeTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:25540)
+    at n.runTask (https://domain-locker.com/assets/index-BRmYuaHC.js:14:20214)
+    at y (https://domain-locker.com/assets/index-BRmYuaHC.js:14:27800) @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[    5275ms] [LOG] %cThis occurred at 17:49:50 on Mon Nov 23 2026, in HomePageComponent.triggerBackgroundUpdate
+Please reference the debugging documentation for next steps: http://domain-locker.com/about/developing/debugging font-size:10px; color:#f9a939; @ https://domain-locker.com/assets/index-BRmYuaHC.js:103
+[    5292ms] [ERROR] Access to fetch at 'https://glitch.as93.net/api/3/envelope/?sentry_version=7&sentry_key=d82b334e62c74636a8030e34b8d3930f&sentry_client=sentry.javascript.angular%2F9.6.0' from origin 'https://domain-locker.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://domain-locker.com/:1
+[    5293ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://glitch.as93.net/api/3/envelope/?sentry_version=7&sentry_key=d82b334e62c74636a8030e34b8d3930f&sentry_client=sentry.javascript.angular%2F9.6.0:1
+[    8357ms] [WARNING] The resource data:video/mp2t;base64,aW1wb3J0ICcuL3N0eWxlcy5jc3MnOwppbXBvcnQgJ3pvbmUuanMnOwppbXBvcnQgeyBib290c3RyYXBBcHBsaWNhdGlvbiB9IGZyb20gJ0Bhbmd1bGFyL3BsYXRmb3JtLWJyb3dzZXInOwoKaW1wb3J0IHsgQXBwQ29tcG9uZW50IH0gZnJvbSAnfi9hcHAvYXBwLmNvbXBvbmVudCc7CmltcG9ydCB7IGFwcENvbmZpZyB9IGZyb20gJ34vYXBwL2FwcC5jb25maWcnOwoKYm9vdHN0cmFwQXBwbGljYXRpb24oQXBwQ29tcG9uZW50LCBhcHBDb25maWcpLmNhdGNoKChlcnIpID0+CiAgY29uc29sZS5lcnJvcign8J+SgCBCb2xsb2Nrcywgc29tZXRoaW5nIHdlbnQgc2VyaW91c2x5IHdyb25nLi4uJywgZXJyKSwKKTsK was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://domain-locker.com/:1

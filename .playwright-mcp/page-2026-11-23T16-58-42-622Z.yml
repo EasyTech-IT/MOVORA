@@ -1,0 +1,384 @@
+- generic [ref=f22e2]:
+  - banner [ref=f22e3]:
+    - generic [ref=f22e4]:
+      - link "MOVORA Startseite" [ref=f22e5] [cursor=pointer]:
+        - /url: /
+        - img "MOVORA" [ref=f22e6]
+      - navigation "Hauptnavigation" [ref=f22e7]:
+        - link "Startseite" [ref=f22e8] [cursor=pointer]:
+          - /url: /
+        - link "Entdecken" [ref=f22e9] [cursor=pointer]:
+          - /url: /entdecken
+        - link "Anbieter" [ref=f22e10] [cursor=pointer]:
+          - /url: "#anbieter"
+        - link "Bewertungen" [ref=f22e11] [cursor=pointer]:
+          - /url: "#bewertungen"
+        - link "Für Unternehmen" [ref=f22e12] [cursor=pointer]:
+          - /url: "#unternehmen"
+      - generic [ref=f22e14]:
+        - link "Login" [ref=f22e15] [cursor=pointer]:
+          - /url: /auth/login
+        - link "Registrierung" [ref=f22e16] [cursor=pointer]:
+          - /url: /auth/sign-up
+  - main [ref=f22e17]:
+    - region "Mobilität transparent und vergleichbar" [ref=f22e18]:
+      - generic [ref=f22e19]:
+        - generic [ref=f22e20]:
+          - paragraph [ref=f22e21]: Mobilitätsqualität
+          - heading "Mobilität transparent und vergleichbar" [level=1] [ref=f22e22]
+          - paragraph [ref=f22e23]: MOVORA macht Mobilitätsqualität sichtbar. Bewertungen und Betriebsdaten fließen in einen nachvollziehbaren Score, sobald genug geprüfte Daten vorliegen.
+          - generic [ref=f22e24]:
+            - link "Anbieter suchen" [ref=f22e25] [cursor=pointer]:
+              - /url: "#suche"
+            - link "So entsteht der Score" [ref=f22e26] [cursor=pointer]:
+              - /url: "#score"
+          - list [ref=f22e27]:
+            - listitem [ref=f22e28]: Datenanbindung in Vorbereitung
+            - listitem [ref=f22e33]: Offene Methodik
+            - listitem [ref=f22e37]: Keine Scores ohne Daten
+          - paragraph [ref=f22e41]: Die Anbieter auf dieser Seite sind Demo-Daten.
+        - figure [ref=f22e42]:
+          - img "Eine Pendlerin prüft ihr Smartphone an einem Bahnsteig." [ref=f22e43]
+          - generic [ref=f22e52]:
+            - generic [ref=f22e53]: Datenquelle
+            - generic [ref=f22e54]: Noch nicht angebunden
+          - generic [ref=f22e61]:
+            - generic [ref=f22e62]: MOVORA Score
+            - generic [ref=f22e63]: Noch kein Score
+    - region "Mobilitätsdaten verbinden, Qualität sichtbar machen" [ref=f22e64]:
+      - generic [ref=f22e66]:
+        - generic [ref=f22e67]:
+          - generic [ref=f22e68]:
+            - paragraph [ref=f22e69]: Mobility Intelligence
+            - heading "Mobilitätsdaten verbinden, Qualität sichtbar machen" [level=2] [ref=f22e70]
+            - paragraph [ref=f22e71]: MOVORA führt Fahrgastbewertungen und Betriebsdaten aus offenen Quellen zusammen. Die Anbindung der Quellen ist in Vorbereitung.
+          - list [ref=f22e72]:
+            - listitem [ref=f22e73]:
+              - generic [ref=f22e79]:
+                - generic [ref=f22e80]:
+                  - heading "Fahrplandaten (GTFS)" [level=3] [ref=f22e81]
+                  - generic [ref=f22e82]: Noch nicht angebunden
+                - paragraph [ref=f22e85]: Haltestellen, Linien und Fahrpläne aus GTFS-Quellen.
+            - listitem [ref=f22e86]:
+              - generic [ref=f22e91]:
+                - generic [ref=f22e92]:
+                  - heading "Echtzeitdaten" [level=3] [ref=f22e93]
+                  - generic [ref=f22e94]: Noch nicht angebunden
+                - paragraph [ref=f22e97]: Verspätungen und Ausfälle aus GTFS-Realtime.
+            - listitem [ref=f22e98]:
+              - generic [ref=f22e105]:
+                - heading "Fahrgastbewertungen" [level=3] [ref=f22e107]
+                - paragraph [ref=f22e108]: Bewertungen nach festen Kriterien, an Fahrten gebunden. Im Aufbau.
+        - figure [ref=f22e109]:
+          - img "Ein älterer Fahrgast nutzt sein Smartphone an einer Straßenbahnhaltestelle." [ref=f22e110]
+          - generic [ref=f22e117]:
+            - generic [ref=f22e118]: Mobilitätsdaten
+            - generic [ref=f22e119]: Anbindung in Vorbereitung
+          - generic [ref=f22e126]:
+            - generic [ref=f22e127]: Aktualität
+            - generic [ref=f22e128]: Wird nach Anbindung ausgewiesen
+    - region "Anbieter, Linien und Regionen finden" [ref=f22e129]:
+      - generic [ref=f22e130]:
+        - generic [ref=f22e131]:
+          - paragraph [ref=f22e132]: Entdecken
+          - heading "Anbieter, Linien und Regionen finden" [level=2] [ref=f22e133]
+          - paragraph [ref=f22e134]: Suche nach Anbieter, Verkehrsmittel, Region oder Stadt.
+        - generic [ref=f22e135]:
+          - generic [ref=f22e136]: Anbieter, Linien oder Regionen suchen
+          - searchbox "Anbieter, Linien oder Regionen suchen" [ref=f22e137]
+          - paragraph [ref=f22e138]: 3 Demo-Ergebnisse
+          - generic [ref=f22e139]:
+            - generic [ref=f22e140]:
+              - generic [ref=f22e141]:
+                - generic [ref=f22e142]:
+                  - generic [ref=f22e143]: Demo-Daten
+                  - generic [ref=f22e144]: Verkehrsverbund
+                - link "Beispiel Verkehrsverbund Nord" [ref=f22e146] [cursor=pointer]:
+                  - /url: /anbieter/beispiel-verkehrsverbund-nord
+                - generic [ref=f22e147]: Beispielregion Nord · Bus, Straßenbahn
+              - paragraph [ref=f22e149]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+            - generic [ref=f22e150]:
+              - generic [ref=f22e151]:
+                - generic [ref=f22e152]:
+                  - generic [ref=f22e153]: Demo-Daten
+                  - generic [ref=f22e154]: Regionalverkehr
+                - link "Beispiel Regionalbahn Süd" [ref=f22e156] [cursor=pointer]:
+                  - /url: /anbieter/beispiel-regionalbahn-sued
+                - generic [ref=f22e157]: Beispielregion Süd · Regionalzug
+              - paragraph [ref=f22e159]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+            - generic [ref=f22e160]:
+              - generic [ref=f22e161]:
+                - generic [ref=f22e162]:
+                  - generic [ref=f22e163]: Demo-Daten
+                  - generic [ref=f22e164]: Stadtverkehr
+                - link "Beispiel Stadtwerke Mitte" [ref=f22e166] [cursor=pointer]:
+                  - /url: /anbieter/beispiel-stadtwerke-mitte
+                - generic [ref=f22e167]: Beispielstadt Mitte · Bus, U-Bahn
+              - paragraph [ref=f22e169]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+    - region "Vergleich von Anbietern und Routen" [ref=f22e170]:
+      - generic [ref=f22e171]:
+        - generic [ref=f22e172]:
+          - paragraph [ref=f22e173]: Anbieter und Routen
+          - heading "Vergleich von Anbietern und Routen" [level=2] [ref=f22e174]
+          - paragraph [ref=f22e175]: Der Vergleich ist geplant. Angezeigt werden nur Daten aus geprüften Quellen; bis dahin entstehen keine Ranglisten.
+        - generic [ref=f22e176]:
+          - list [ref=f22e177]:
+            - listitem [ref=f22e178]:
+              - generic [ref=f22e183]:
+                - generic [ref=f22e184]:
+                  - heading "Stammdaten" [level=3] [ref=f22e185]
+                  - generic [ref=f22e186]: Noch nicht angebunden
+                - paragraph [ref=f22e189]: Anbieter, Linien und Haltestellen.
+            - listitem [ref=f22e190]:
+              - generic [ref=f22e197]:
+                - heading "Bewertungen" [level=3] [ref=f22e199]
+                - paragraph [ref=f22e200]: Community-Bewertungen je Anbieter und Linie. Noch keine Daten vorhanden.
+            - listitem [ref=f22e201]:
+              - generic [ref=f22e205]:
+                - generic [ref=f22e206]:
+                  - heading "Betriebsdaten" [level=3] [ref=f22e207]
+                  - generic [ref=f22e208]: Noch nicht angebunden
+                - paragraph [ref=f22e211]: Pünktlichkeit und Ausfälle je Linie.
+          - img "Geplante Vorschau für Anbietervergleiche. Es werden noch keine Daten oder Scores angezeigt." [ref=f22e212]:
+            - generic [ref=f22e213]:
+              - generic [ref=f22e214]:
+                - paragraph [ref=f22e215]: MOVORA / VERGLEICH
+                - heading "Datenlage je Dimension" [level=3] [ref=f22e216]
+              - generic [ref=f22e217]: Produktvorschau · geplant
+            - generic [ref=f22e218]:
+              - generic [ref=f22e219]:
+                - generic [ref=f22e220]: Fahrplan und Regelmäßigkeit
+                - generic [ref=f22e221]: Noch keine Daten
+              - generic [ref=f22e231]:
+                - generic [ref=f22e232]: Betriebsdaten und Aktualität
+                - generic [ref=f22e233]: Noch keine Daten
+              - generic [ref=f22e243]:
+                - generic [ref=f22e244]: Community-Erfahrungen
+                - generic [ref=f22e245]: Noch keine Daten
+            - paragraph [ref=f22e255]: Ein Vergleich erscheint erst, wenn geprüfte Quellen und eine freigegebene Methodik vorliegen.
+    - region "So entsteht der MOVORA Score" [ref=f22e256]:
+      - generic [ref=f22e257]:
+        - generic [ref=f22e258]:
+          - paragraph [ref=f22e259]: MOVORA Score
+          - heading "So entsteht der MOVORA Score" [level=2] [ref=f22e260]
+          - paragraph [ref=f22e261]: Community- und Betriebsdaten bleiben getrennt. Ein Overall Score wird erst ausgewiesen, wenn Methodik und Datengrundlage freigegeben sind.
+        - generic [ref=f22e262]:
+          - article [ref=f22e263]:
+            - generic [ref=f22e264]:
+              - heading "Community Score" [level=3] [ref=f22e271]
+              - generic [ref=f22e272]: Noch keine ausreichenden Daten
+            - paragraph [ref=f22e282]: Vorgesehen für geprüfte Fahrgastbewertungen. Skala und Mindeststichprobe sind noch nicht freigegeben.
+            - generic [ref=f22e283]:
+              - img "Noch keine ausreichenden Daten" [ref=f22e284]
+              - paragraph [ref=f22e294]: Es liegen noch keine geprüften Fahrgastbewertungen vor.
+            - generic [ref=f22e295]:
+              - generic [ref=f22e296]:
+                - paragraph [ref=f22e297]: Datenherkunft
+                - paragraph [ref=f22e298]: Noch keine Daten verfügbar.
+                - paragraph [ref=f22e299]: "Vorgesehene Datengrundlage: Fahrgastbewertungen; Erhebungsmethode noch nicht freigegeben."
+              - paragraph [ref=f22e300]: Konfidenz noch nicht ermittelbar, da keine ausreichende Datengrundlage vorliegt.
+          - article [ref=f22e301]:
+            - generic [ref=f22e302]:
+              - heading "Operational Score" [level=3] [ref=f22e306]
+              - generic [ref=f22e307]: Keine Datenquelle angebunden
+            - paragraph [ref=f22e317]: Vorgesehen für geprüfte Betriebsdaten wie Pünktlichkeit und Ausfälle.
+            - generic [ref=f22e318]:
+              - img "Keine Datenquelle angebunden" [ref=f22e319]
+              - paragraph [ref=f22e329]: Es ist noch keine geprüfte Fahrplan- und Echtzeitquelle angebunden.
+            - generic [ref=f22e330]:
+              - generic [ref=f22e331]:
+                - paragraph [ref=f22e332]: Datenherkunft
+                - paragraph [ref=f22e333]: Noch keine Daten verfügbar.
+                - paragraph [ref=f22e334]: "Vorgesehene Datengrundlage: Fahrplan- und Echtzeitdaten; noch nicht angebunden."
+              - paragraph [ref=f22e335]: Konfidenz noch nicht ermittelbar, da keine ausreichende Datengrundlage vorliegt.
+          - article [ref=f22e336]:
+            - generic [ref=f22e337]:
+              - heading "MOVORA Overall Score" [level=3] [ref=f22e342]
+              - generic [ref=f22e343]: Methodik in Prüfung
+            - paragraph [ref=f22e346]: Gemeinsame Darstellung erst, wenn beide Teilwerte und ihre Verbindung nachvollziehbar belegt sind.
+            - generic [ref=f22e347]:
+              - img "Methodik in Prüfung" [ref=f22e348]
+              - paragraph [ref=f22e358]: Berechnung und Gewichtung sind noch nicht freigegeben.
+            - generic [ref=f22e359]:
+              - generic [ref=f22e360]:
+                - paragraph [ref=f22e361]: Datenherkunft
+                - paragraph [ref=f22e362]: Noch keine Daten verfügbar.
+                - paragraph [ref=f22e363]: "Vorgesehene Datengrundlage: Community- und Betriebsdaten mit jeweils dokumentierter Herkunft."
+              - paragraph [ref=f22e364]: Konfidenz noch nicht ermittelbar, da keine ausreichende Datengrundlage vorliegt.
+        - generic [ref=f22e365]:
+          - img "Geplante MOVORA-App-Vorschau ohne Scorewerte; Daten sind noch nicht ausreichend verfügbar." [ref=f22e366]:
+            - generic [ref=f22e368]:
+              - generic [ref=f22e369]:
+                - generic [ref=f22e370]: MOVORA
+                - generic [ref=f22e371]: Vorschau · geplant
+              - generic [ref=f22e372]:
+                - generic [ref=f22e373]:
+                  - paragraph [ref=f22e374]: Mobilitätsqualität
+                  - heading "Dein Überblick" [level=3] [ref=f22e375]
+                - generic [ref=f22e376]:
+                  - paragraph [ref=f22e377]: MOVORA Overall Score
+                  - paragraph [ref=f22e378]: Noch keine ausreichenden Daten
+                  - generic [ref=f22e379]: Kein Score verfügbar
+                - generic [ref=f22e390]:
+                  - generic [ref=f22e391]:
+                    - generic [ref=f22e392]: Community
+                    - generic [ref=f22e393]: Noch keine Daten
+                  - generic [ref=f22e403]:
+                    - generic [ref=f22e404]: Betrieb
+                    - generic [ref=f22e405]: Noch keine Daten
+                - paragraph [ref=f22e415]: Quellen, Zeitraum und Methodik werden mit jedem veröffentlichten Wert angezeigt.
+          - generic [ref=f22e416]:
+            - heading "Wie der Score entsteht" [level=3] [ref=f22e417]
+            - generic [ref=f22e418]:
+              - generic [aria-hidden] [ref=f22e419]: "01"
+              - generic [ref=f22e420]:
+                - heading "Daten sammeln" [level=3] [ref=f22e421]
+                - paragraph [ref=f22e422]: Bewertungen und Betriebsdaten aus geprüften Quellen.
+            - generic [ref=f22e423]:
+              - generic [aria-hidden] [ref=f22e424]: "02"
+              - generic [ref=f22e425]:
+                - heading "Daten prüfen" [level=3] [ref=f22e426]
+                - paragraph [ref=f22e427]: Vollständigkeit, Aktualität und Mindestanzahl werden geprüft.
+            - generic [ref=f22e428]:
+              - generic [aria-hidden] [ref=f22e429]: "03"
+              - generic [ref=f22e430]:
+                - heading "Teilwerte verbinden" [level=3] [ref=f22e431]
+                - paragraph [ref=f22e432]: Community und Operational ergeben den Overall Score, sobald genug Daten vorliegen.
+    - region "Bewertungen von Fahrgästen" [ref=f22e433]:
+      - generic [ref=f22e434]:
+        - generic [ref=f22e435]:
+          - paragraph [ref=f22e436]: Community
+          - heading "Bewertungen von Fahrgästen" [level=2] [ref=f22e437]
+          - paragraph [ref=f22e438]: Nutzerinnen und Nutzer bewerten Anbieter nach festen Kriterien. Negative Bewertungen werden nicht ausgeblendet; Meldungen werden geprüft.
+        - generic [ref=f22e439]:
+          - generic [ref=f22e440]:
+            - heading "Bewertungen an Fahrten gebunden" [level=3] [ref=f22e447]
+            - paragraph [ref=f22e448]: Die Bewertung soll auf einer erlebten Fahrt beruhen. Dieses Verfahren wird mit der Datenbankarchitektur umgesetzt.
+          - generic [ref=f22e449]:
+            - heading "Geprüfte Meldungen" [level=3] [ref=f22e454]
+            - paragraph [ref=f22e455]: Auffällige Inhalte werden moderiert, legitime Kritik bleibt sichtbar.
+    - region "Betriebsqualität auf Basis offener Daten" [ref=f22e456]:
+      - generic [ref=f22e457]:
+        - generic [ref=f22e458]:
+          - paragraph [ref=f22e459]: Operational Quality
+          - heading "Betriebsqualität auf Basis offener Daten" [level=2] [ref=f22e460]
+          - paragraph [ref=f22e461]: Fahrplan- und Echtzeitdaten werden erst nach einer geprüften Anbindung auf Vollständigkeit und Aktualität geprüft.
+        - generic [ref=f22e462]:
+          - generic [ref=f22e463]:
+            - generic [ref=f22e464]:
+              - heading "Pünktlichkeit" [level=3] [ref=f22e468]
+              - generic [ref=f22e469]: Noch nicht angebunden
+              - paragraph [ref=f22e472]: Abweichungen gegenüber dem Fahrplan.
+            - generic [ref=f22e473]:
+              - heading "Ausfälle" [level=3] [ref=f22e478]
+              - generic [ref=f22e479]: Noch nicht angebunden
+              - paragraph [ref=f22e482]: Entfallene Fahrten im Berichtszeitraum.
+            - generic [ref=f22e483]:
+              - heading "Datenaktualität" [level=3] [ref=f22e487]
+              - generic [ref=f22e488]: Noch nicht angebunden
+              - paragraph [ref=f22e491]: Wann die Quelle zuletzt aktualisiert wurde.
+          - img "Geplante MOVORA-Dashboard-Vorschau. Quellen und Berichte sind noch nicht angebunden." [ref=f22e492]:
+            - generic [ref=f22e497]:
+              - generic [ref=f22e498]:
+                - paragraph [ref=f22e499]: MOVORA
+                - paragraph [ref=f22e500]: Datenquellen
+                - paragraph [ref=f22e501]: Qualitätsprüfung
+                - paragraph [ref=f22e502]: Berichte
+              - generic [ref=f22e503]:
+                - generic [ref=f22e504]:
+                  - generic [ref=f22e505]:
+                    - paragraph [ref=f22e506]: BETRIEBSÜBERSICHT
+                    - heading "Datenstatus" [level=3] [ref=f22e507]
+                  - generic [ref=f22e508]: Geplant
+                - generic [ref=f22e509]:
+                  - generic [ref=f22e510]:
+                    - paragraph [ref=f22e511]: GTFS-Fahrplandaten
+                    - paragraph [ref=f22e512]: Noch keine Quelle angebunden
+                  - generic [ref=f22e513]:
+                    - paragraph [ref=f22e514]: GTFS-Realtime
+                    - paragraph [ref=f22e515]: Noch keine Quelle angebunden
+                - generic [ref=f22e516]:
+                  - paragraph [ref=f22e517]: Datenabdeckung und Aktualität
+                  - paragraph [ref=f22e518]: Diese Angaben erscheinen erst nach einer geprüften Datenanbindung.
+    - region "Interaktive Karte" [ref=f22e519]:
+      - generic [ref=f22e520]:
+        - generic [ref=f22e521]:
+          - paragraph [ref=f22e522]: Karte
+          - heading "Interaktive Karte" [level=2] [ref=f22e523]
+          - paragraph [ref=f22e524]: Haltestellen und Linien werden nach der Datenanbindung auf der Karte dargestellt.
+        - generic [ref=f22e530]:
+          - heading "Kartenansicht folgt mit der Datenanbindung" [level=3] [ref=f22e531]
+          - paragraph [ref=f22e532]: Haltestellen und Linien werden angezeigt, sobald eine lizenzierte Kartenquelle und geprüfte Haltestellendaten angebunden sind. Bis dahin zeigt MOVORA keine Karte.
+    - region "Woher die Daten kommen und wie sie geprüft werden" [ref=f22e533]:
+      - generic [ref=f22e534]:
+        - generic [ref=f22e535]:
+          - paragraph [ref=f22e536]: Datenvertrauen
+          - heading "Woher die Daten kommen und wie sie geprüft werden" [level=2] [ref=f22e537]
+          - paragraph [ref=f22e538]: MOVORA zeigt offen, welche Quellen angebunden sind, wie aktuell sie sind und wo Lücken bestehen.
+        - generic [ref=f22e539]:
+          - article [ref=f22e540]:
+            - generic [ref=f22e545]:
+              - paragraph [ref=f22e546]: 01 / Grundlage
+              - heading "Datenquellen" [level=3] [ref=f22e547]
+              - paragraph [ref=f22e548]: Offene Fahrplan- und Echtzeitdaten (GTFS, GTFS-Realtime) sowie Fahrgastbewertungen.
+            - paragraph [ref=f22e549]: Aktuell ist noch keine Quelle angebunden.
+          - generic [ref=f22e550]:
+            - generic [ref=f22e551]:
+              - generic [aria-hidden] [ref=f22e552]: "02"
+              - generic [ref=f22e553]:
+                - heading "Aktualität" [level=3] [ref=f22e554]
+                - paragraph [ref=f22e555]: Jede Quelle zeigt, wann sie zuletzt aktualisiert wurde. Ohne Anbindung gibt es keine Angabe.
+            - generic [ref=f22e556]:
+              - generic [aria-hidden] [ref=f22e557]: "03"
+              - generic [ref=f22e558]:
+                - heading "Datenabdeckung" [level=3] [ref=f22e559]
+                - paragraph [ref=f22e560]: Ausgewiesen wird, für welche Regionen und Anbieter Daten vorliegen.
+            - generic [ref=f22e561]:
+              - generic [aria-hidden] [ref=f22e562]: "04"
+              - generic [ref=f22e563]:
+                - heading "Methodik" [level=3] [ref=f22e564]
+                - paragraph [ref=f22e565]: Die Berechnung der Scores wird offen dokumentiert, sobald sie veröffentlicht ist.
+    - region "Qualität messbar machen" [ref=f22e566]:
+      - generic [ref=f22e567]:
+        - generic [ref=f22e568]:
+          - paragraph [ref=f22e569]: Für Unternehmen
+          - heading "Qualität messbar machen" [level=2] [ref=f22e570]
+          - paragraph [ref=f22e571]: Verkehrsunternehmen und Analysten sollen Kennzahlen, Berichte und Verlaufsdaten erhalten. Diese Funktionen sind geplant und noch nicht verfügbar.
+        - generic [ref=f22e572]:
+          - generic [ref=f22e573]:
+            - generic [ref=f22e574]:
+              - heading "Transparenz" [level=3] [ref=f22e580]
+              - generic [ref=f22e581]: Geplant
+              - paragraph [ref=f22e584]: Eigene Scores mit nachvollziehbarer Herleitung.
+            - generic [ref=f22e585]:
+              - heading "Berichte" [level=3] [ref=f22e589]
+              - generic [ref=f22e590]: Geplant
+              - paragraph [ref=f22e593]: Zeitraumfilter, Vergleiche und Exporte.
+            - generic [ref=f22e594]:
+              - heading "Regeln" [level=3] [ref=f22e597]
+              - paragraph [ref=f22e598]: Regeln für Scores und Moderation werden offen dokumentiert.
+          - figure [ref=f22e599]:
+            - img "Illustratives Foto eines Teams, das Mobilitätsdaten gemeinsam prüft." [ref=f22e600]
+            - generic [ref=f22e609]:
+              - generic [ref=f22e610]: Datenquellen
+              - generic [ref=f22e611]: Noch nicht angebunden
+            - generic [ref=f22e618]:
+              - generic [ref=f22e619]: Unternehmensberichte
+              - generic [ref=f22e620]: Geplant
+    - region "Jetzt Anbieter suchen" [ref=f22e621]:
+      - generic [ref=f22e622]:
+        - heading "Jetzt Anbieter suchen" [level=2] [ref=f22e623]
+        - paragraph [ref=f22e624]: Finde Anbieter und Linien in der Demo-Suche und prüfe, welche Datenquellen angebunden sind.
+        - generic [ref=f22e625]:
+          - link "Anbieter suchen" [ref=f22e626] [cursor=pointer]:
+            - /url: "#suche"
+          - link "Datenquellen ansehen" [ref=f22e627] [cursor=pointer]:
+            - /url: "#datenvertrauen"
+  - contentinfo [ref=f22e628]:
+    - generic [ref=f22e629]:
+      - link "MOVORA Startseite" [ref=f22e630] [cursor=pointer]:
+        - /url: /
+        - img "MOVORA" [ref=f22e631]
+      - paragraph [ref=f22e632]: Mobilitätsqualität transparent und vergleichbar.
+      - link "Nach oben" [ref=f22e633] [cursor=pointer]:
+        - /url: "#top"

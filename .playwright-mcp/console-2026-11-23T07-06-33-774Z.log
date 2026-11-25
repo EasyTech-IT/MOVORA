@@ -1,0 +1,6 @@
+[     648ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:761
+[     793ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:761
+[    1782ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3000/_next/static/chunks/node_modules_maplibre-gl_dist_maplibre-gl_mjs_16esp180l2fmy._.js:11423:42) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1037
+[    1782ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3000/_next/static/chunks/node_modules_maplibre-gl_dist_maplibre-gl_mjs_16esp180l2fmy._.js:11423:42) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:1037

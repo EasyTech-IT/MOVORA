@@ -18,8 +18,8 @@ Dieses Dokument listet alle verwendeten Open-Source-Projekte, deren Lizenzen, He
 | Komponente | Herkunft | Lizenz | Geplanter Einsatz |
 |---|---|---|---|
 | Next.js SaaS Starter (nur Konzepte/Stripe-Logik) | [nextjs/saas-starter](https://github.com/nextjs/saas-starter) | MIT | Stripe Checkout, Abos, Kundenportal, Rollen/Teams. **Nicht kopieren** – verwendet Drizzle statt Supabase; nur Stripe-Muster übernehmen und an Supabase anpassen. |
-| MobilityData GTFS Validator | [MobilityData/gtfs-validator](https://github.com/MobilityData/gtfs-validator) | Apache-2.0 | Validierung von Fahrplandaten (GTFS), sobald MOVORA Mobilitätsdaten verarbeitet. Java-Tool, Einsatz als CLI/CI-Schritt. |
-| Ionic Capacitor Starters | [ionic-team/capacitor-starters](https://github.com/ionic-team/capacitor-starters) | MIT | Android-App-Grundgerüst, sobald die Web-Basis stabil ist. |
+| MobilityData GTFS Validator | [MobilityData/gtfs-validator](https://github.com/MobilityData/gtfs-validator) | Apache-2.0 | Validierung von GTFS-Schedule-Feeds, sobald MOVORA Mobilitätsdaten verarbeitet. Java-Tool, Einsatz als CLI/CI-Schritt. Für GTFS-Realtime, GBFS und Geodaten gelten eigene Validatoren bzw. Schemas (siehe Skill `mobility-data-engineering`). |
+| Ionic Capacitor Starters | [ionic-team/capacitor-starters](https://github.com/ionic-team/capacitor-starters) | MIT | Android-App-Grundgerüst, sobald die Web-Basis stabil ist. Noch nicht integriert. Rollenregeln: [movora-mobile](../.github/agents/movora-mobile.agent.md), Skill [android-mobile-capacitor](../.github/skills/android-mobile-capacitor/SKILL.md). |
 | Playwright | [microsoft/playwright](https://github.com/microsoft/playwright) | Apache-2.0 | End-to-End-Tests. |
 
 ## Technische Anpassungen
@@ -34,3 +34,7 @@ Dieses Dokument listet alle verwendeten Open-Source-Projekte, deren Lizenzen, He
 - `@supabase/ssr` und `@supabase/supabase-js` sind auf `latest` gepinnt → vor Produktivbetrieb auf feste Versionen festlegen.
 - shadcn/ui-Komponenten werden in das Repo kopiert (kein npm-Paket) → Updates manuell über die shadcn-CLI.
 - MapLibre-Styles/Tiles: Für den Produktivbetrieb eigenen Tile-Server oder Anbieter (z. B. MapTiler, OpenFreeMap) mit passender Lizenz wählen; OSM-Attribution beachten.
+
+## KI-Skills und Projektregeln
+
+Die Nutzung der Bausteine ist in Skills beschrieben: [docs/AI_SKILLS.md](./AI_SKILLS.md). Der Skill [open-source-integration](../.github/skills/open-source-integration/SKILL.md) legt fest, wie neue Repositories geprüft und hier eingetragen werden.

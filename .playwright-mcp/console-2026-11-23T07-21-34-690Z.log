@@ -1,0 +1,14 @@
+[     420ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:2:19160) @ http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:1
+[     421ms] [ERROR] Error: Worker failed to load. Check that the worker URL is correct.
+    at Worker.<anonymous> (http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:2:19160) @ http://localhost:3100/_next/static/chunks/0t0ol1nycrk7u.js:1
+[   18482ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-verkehrsverbund-nord?_rsc=5CB68i4pnAekjehf:1
+[   18807ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-regionalbahn-sued?_rsc=5CB68i4pnAekjehf:1
+[   18876ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-stadtwerke-mitte?_rsc=5CB68i4pnAekjehf:1
+[  443084ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-verkehrsverbund-nord?_rsc=5CB68i4pnAekjehf:1
+[  443127ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-regionalbahn-sued?_rsc=5CB68i4pnAekjehf:1
+[  443173ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-stadtwerke-mitte?_rsc=5CB68i4pnAekjehf:1
+[  743927ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-stadtwerke-mitte?_rsc=5CB68i4pnAekjehf:1
+[  743970ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-regionalbahn-sued?_rsc=5CB68i4pnAekjehf:1
+[  744259ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/anbieter/beispiel-verkehrsverbund-nord?_rsc=5CB68i4pnAekjehf:1
+[  744869ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3100/?_rsc=5CB68i4pnAekjehf:1

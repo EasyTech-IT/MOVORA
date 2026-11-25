@@ -1,0 +1,3 @@
+[      -2ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ chrome-error://chromewebdata/:1
+[     907ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://dev-br.malwarebytes.com/:1
+[     938ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://dev-br.malwarebytes.com/favicon.ico:1

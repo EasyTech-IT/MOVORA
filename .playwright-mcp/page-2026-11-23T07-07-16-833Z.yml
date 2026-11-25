@@ -1,0 +1,181 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - banner [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - link "MOVORA" [ref=f3e5] [cursor=pointer]:
+          - /url: /
+        - navigation "Hauptnavigation" [ref=f3e6]:
+          - link "Startseite" [ref=f3e7] [cursor=pointer]:
+            - /url: /
+          - link "Entdecken" [ref=f3e8] [cursor=pointer]:
+            - /url: /entdecken
+          - link "Anbieter" [ref=f3e9] [cursor=pointer]:
+            - /url: "#anbieter"
+          - link "Bewertungen" [ref=f3e10] [cursor=pointer]:
+            - /url: "#bewertungen"
+          - link "Für Unternehmen" [ref=f3e11] [cursor=pointer]:
+            - /url: "#unternehmen"
+        - generic [ref=f3e12]:
+          - generic [ref=f3e13]: Supabase environment variables required
+          - generic [ref=f3e14]:
+            - button "Sign in" [disabled]
+            - button "Sign up" [disabled]
+    - main [ref=f3e15]:
+      - region "Was ist MOVORA?" [ref=f3e16]:
+        - generic [ref=f3e18]:
+          - paragraph [ref=f3e19]: Mobilitätsqualität
+          - heading "Was ist MOVORA?" [level=1] [ref=f3e20]
+          - paragraph [ref=f3e21]: MOVORA macht Mobilitätsqualität transparent und vergleichbar.
+          - generic [ref=f3e22]:
+            - link "Anbieter suchen" [ref=f3e23] [cursor=pointer]:
+              - /url: "#suche"
+            - link "Für Unternehmen" [ref=f3e24] [cursor=pointer]:
+              - /url: "#unternehmen"
+          - paragraph [ref=f3e25]: Die Anbieter und Karten auf dieser Seite sind Demo-Daten.
+      - region "Anbieter, Linien und Regionen finden" [ref=f3e61]:
+        - generic [ref=f3e62]:
+          - generic [ref=f3e63]:
+            - paragraph [ref=f3e64]: Entdecken
+            - heading "Anbieter, Linien und Regionen finden" [level=2] [ref=f3e65]
+            - paragraph [ref=f3e66]: Suche nach Anbieter, Verkehrsmittel, Region oder Stadt.
+          - generic [ref=f3e67]:
+            - generic [ref=f3e68]: Anbieter, Linien oder Regionen suchen
+            - searchbox "Anbieter, Linien oder Regionen suchen" [ref=f3e69]
+            - paragraph [ref=f3e70]: 3 Demo-Ergebnisse
+            - generic [ref=f3e71]:
+              - generic [ref=f3e72]:
+                - generic [ref=f3e73]:
+                  - generic [ref=f3e74]:
+                    - generic [ref=f3e75]: Demo-Daten
+                    - generic [ref=f3e76]: Verkehrsverbund
+                  - link "Beispiel Verkehrsverbund Nord" [ref=f3e78] [cursor=pointer]:
+                    - /url: /anbieter/beispiel-verkehrsverbund-nord
+                  - generic [ref=f3e79]: Beispielregion Nord · Bus, Straßenbahn
+                - paragraph [ref=f3e81]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+              - generic [ref=f3e82]:
+                - generic [ref=f3e83]:
+                  - generic [ref=f3e84]:
+                    - generic [ref=f3e85]: Demo-Daten
+                    - generic [ref=f3e86]: Regionalverkehr
+                  - link "Beispiel Regionalbahn Süd" [ref=f3e88] [cursor=pointer]:
+                    - /url: /anbieter/beispiel-regionalbahn-sued
+                  - generic [ref=f3e89]: Beispielregion Süd · Regionalzug
+                - paragraph [ref=f3e91]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+              - generic [ref=f3e92]:
+                - generic [ref=f3e93]:
+                  - generic [ref=f3e94]:
+                    - generic [ref=f3e95]: Demo-Daten
+                    - generic [ref=f3e96]: Stadtverkehr
+                  - link "Beispiel Stadtwerke Mitte" [ref=f3e98] [cursor=pointer]:
+                    - /url: /anbieter/beispiel-stadtwerke-mitte
+                  - generic [ref=f3e99]: Beispielstadt Mitte · Bus, U-Bahn
+                - paragraph [ref=f3e101]: Noch keine Bewertung. Für einen Score fehlt die Datengrundlage.
+      - region "Beliebte Mobilitätsanbieter" [ref=f3e102]:
+        - generic [ref=f3e103]:
+          - generic [ref=f3e104]:
+            - paragraph [ref=f3e105]: Anbieter
+            - heading "Beliebte Mobilitätsanbieter" [level=2] [ref=f3e106]
+            - paragraph [ref=f3e107]: Noch sind keine echten Anbieterprofile angelegt. Sobald Daten aus geprüften Quellen vorliegen, erscheinen sie hier.
+          - generic [ref=f3e108]:
+            - generic [ref=f3e110]:
+              - generic [ref=f3e116]: Verkehrsverbünde
+              - generic [ref=f3e117]: Regionale Verbünde mit Bus, Bahn und Straßenbahn.
+            - generic [ref=f3e119]:
+              - generic [ref=f3e128]: Regionalverkehr
+              - generic [ref=f3e129]: Regionalzüge und Verbindungen zwischen Städten.
+            - generic [ref=f3e131]:
+              - generic [ref=f3e135]: Stadtverkehr
+              - generic [ref=f3e136]: Stadtbusse, U-Bahnen und Straßenbahnen.
+      - region "So entsteht der MOVORA Score" [ref=f3e137]:
+        - generic [ref=f3e138]:
+          - generic [ref=f3e139]:
+            - paragraph [ref=f3e140]: MOVORA Score
+            - heading "So entsteht der MOVORA Score" [level=2] [ref=f3e141]
+            - paragraph [ref=f3e142]: Der Overall Score setzt sich aus zwei Teilwerten zusammen. Ein Score wird nur angezeigt, wenn genug Daten vorliegen.
+          - generic [ref=f3e143]:
+            - generic [ref=f3e145]:
+              - generic [ref=f3e152]: Community Score
+              - generic [ref=f3e153]: Bewertungen von Nutzerinnen und Nutzern, mit Mindestanzahl und Gewichtung.
+            - generic [ref=f3e155]:
+              - generic [ref=f3e159]: Operational Score
+              - generic [ref=f3e160]: Betriebsdaten wie Pünktlichkeit und Ausfälle aus Mobilitätsdatenquellen.
+            - generic [ref=f3e163]:
+              - generic [ref=f3e168]: Overall Score
+              - generic [ref=f3e169]: Verbindet beide Teilwerte und zeigt zusätzlich Datenqualität und Aktualität.
+      - region "Bewertungen von Fahrgästen" [ref=f3e170]:
+        - generic [ref=f3e171]:
+          - generic [ref=f3e172]:
+            - paragraph [ref=f3e173]: Community
+            - heading "Bewertungen von Fahrgästen" [level=2] [ref=f3e174]
+            - paragraph [ref=f3e175]: Nutzerinnen und Nutzer bewerten Anbieter nach festen Kriterien. Negative Bewertungen werden nicht ausgeblendet; Meldungen werden geprüft.
+          - generic [ref=f3e176]:
+            - generic [ref=f3e178]:
+              - generic [ref=f3e185]: Bewertungen an Fahrten gebunden
+              - generic [ref=f3e186]: Die Bewertung soll auf einer erlebten Fahrt beruhen. Dieses Verfahren wird mit der Datenbankarchitektur umgesetzt.
+            - generic [ref=f3e188]:
+              - generic [ref=f3e193]: Geprüfte Meldungen
+              - generic [ref=f3e194]: Auffällige Inhalte werden moderiert, legitime Kritik bleibt sichtbar.
+      - region "Betriebsqualität auf Basis offener Daten" [ref=f3e195]:
+        - generic [ref=f3e196]:
+          - generic [ref=f3e197]:
+            - paragraph [ref=f3e198]: Operational Quality
+            - heading "Betriebsqualität auf Basis offener Daten" [level=2] [ref=f3e199]
+            - paragraph [ref=f3e200]: Fahrplan- und Echtzeitdaten werden auf Vollständigkeit und Aktualität geprüft, bevor sie in Scores einfließen.
+          - generic [ref=f3e201]:
+            - generic [ref=f3e203]:
+              - generic [ref=f3e207]: Pünktlichkeit
+              - generic [ref=f3e208]: Abweichungen gegenüber dem Fahrplan.
+            - generic [ref=f3e210]:
+              - generic [ref=f3e215]: Ausfälle
+              - generic [ref=f3e216]: Entfallene Fahrten im Berichtszeitraum.
+            - generic [ref=f3e218]:
+              - generic [ref=f3e222]: Datenaktualität
+              - generic [ref=f3e223]: Wann die Quelle zuletzt aktualisiert wurde.
+      - region "Interaktive Karten-Vorschau" [ref=f3e224]:
+        - generic [ref=f3e225]:
+          - generic [ref=f3e226]:
+            - paragraph [ref=f3e227]: Karte
+            - heading "Interaktive Karten-Vorschau" [level=2] [ref=f3e228]
+            - paragraph [ref=f3e229]: Haltestellen und Linien werden nach der Datenanbindung auf der Karte dargestellt.
+          - generic [ref=f3e231]:
+            - generic [ref=f3e232]: Demo-Daten
+            - generic [ref=f3e233]: "Kartenstil: Platzhalter, keine Haltestellendaten"
+      - region "Verlässlich unterwegs" [ref=f3e236]:
+        - generic [ref=f3e237]:
+          - generic [ref=f3e238]:
+            - paragraph [ref=f3e239]: Für Nutzer
+            - heading "Verlässlich unterwegs" [level=2] [ref=f3e240]
+            - paragraph [ref=f3e241]: "Vergleichen statt raten: Qualität von Anbietern und Linien auf einen Blick."
+          - generic [ref=f3e242]:
+            - generic [ref=f3e244]:
+              - generic [ref=f3e249]: Schnell finden
+              - generic [ref=f3e250]: Anbieter, Linien und Haltestellen in einer Suche.
+            - generic [ref=f3e252]:
+              - generic [ref=f3e256]: Klar vergleichen
+              - generic [ref=f3e257]: Scores mit Datengrundlage und Hinweisen zur Aussagekraft.
+            - generic [ref=f3e259]:
+              - generic [ref=f3e266]: Mitreden
+              - generic [ref=f3e267]: Eigene Bewertungen helfen anderen Fahrgästen.
+      - region "Qualität messbar machen" [ref=f3e268]:
+        - generic [ref=f3e269]:
+          - generic [ref=f3e270]:
+            - paragraph [ref=f3e271]: Für Unternehmen
+            - heading "Qualität messbar machen" [level=2] [ref=f3e272]
+            - paragraph [ref=f3e273]: Verkehrsunternehmen und Analysten erhalten belastbare Kennzahlen, Berichte und Verlaufsdaten.
+          - generic [ref=f3e274]:
+            - generic [ref=f3e276]:
+              - generic [ref=f3e282]: Transparenz
+              - generic [ref=f3e283]: Eigene Scores mit nachvollziehbarer Herleitung.
+            - generic [ref=f3e285]:
+              - generic [ref=f3e289]: Berichte
+              - generic [ref=f3e290]: Zeitraumfilter, Vergleiche und Exporte.
+            - generic [ref=f3e292]:
+              - generic [ref=f3e297]: Keine Manipulation
+              - generic [ref=f3e298]: Scores lassen sich nicht durch Zahlungen beeinflussen.
+    - contentinfo [ref=f3e299]:
+      - generic [ref=f3e300]:
+        - paragraph [ref=f3e301]: MOVORA
+        - paragraph [ref=f3e302]: Mobilitätsqualität transparent und vergleichbar.
+        - link "Nach oben" [ref=f3e303] [cursor=pointer]:
+          - /url: "#top"
+  - alert [ref=f3e304]
